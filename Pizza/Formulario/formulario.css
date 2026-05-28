@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px 16px;
+    overflow-y: auto;
+}
+
+/* ── BOTÓN VOLVER ── */
+.btn-volver {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: rgba(0, 0, 0, 0.45);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    transition: background 0.3s;
+}
+
+.btn-volver:hover {
+    background: rgba(255, 99, 0, 0.55);
+}
+
+/* ── FORM ── */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 60px;
+}
+
+/* ── CARD PRINCIPAL ── */
+.formulario {
+    width: 100%;
+    padding: 24px 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    color: white;
+    animation: aparecer 0.7s ease-in-out;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── TÍTULOS ── */
+.formulario h1 {
+    background: linear-gradient(90deg, #ff6a00, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.formulario p {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ── INPUT CON ÍCONO ── */
+.input-group {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 0 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.input-group:focus-within {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.input-group i {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-right: 8px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    background: transparent;
+    color: white;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+/* ── TÉRMINOS Y CONDICIONES ── */
+.tyc {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: white;
+}
+
+.tyc a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.tyc a:hover {
+    text-decoration: underline;
+}
+
+/* ── TAMAÑO ── */
+.tamano {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tamano label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.tamano select {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.tamano select:focus {
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.tamano select option {
+    background: #1a0a00;
+    color: white;
+}
+
+/* ── EXTRAS ── */
+.extras {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.extras-titulo {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 4px;
+}
+
+.extra-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.extra-item input[type="checkbox"] {
+    accent-color: #ff6a00;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.extra-item label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+}
+
+/* ── COBRO DOMICILIO ── */
+.cobrodomicilio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: rgba(255, 69, 0, 0.2);
+    border: 1px solid rgba(255, 69, 0, 0.4);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cobrodomicilio input[type="checkbox"] {
+    accent-color: orangered;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+/* ── BOTÓN ENVIAR ── */
+.btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    font-size: 1rem;
+    background: white;
+    color: #ff9900;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border-bottom: 2px solid yellow;
+    border-right: 2px solid yellow;
+    border-left: 2px solid transparent;
+    border-top: 2px solid transparent;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    border-top: 2px solid yellow;
+    border-left: 2px solid yellow;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* ── VIDEO FONDO ── */
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.45);
+}

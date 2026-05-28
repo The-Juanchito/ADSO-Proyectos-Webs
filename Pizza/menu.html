@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Pizzeria Juanchito</title>
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+<body>
+
+    <video muted autoplay loop>
+        <source src="./video/PIZZA.mp4" type="video/mp4">
+    </video>
+    <div class="capa"></div>
+
+    <header class="menu-header">
+        <a class="btn-volver" href="index.html">← Volver</a>
+        <h1> Menú - Pizzeria Juanchito</h1>
+        <span></span>
+    </header>
+
+<section class="slider-promociones">
+    <h2>Promociones solo el día de hoy. ¡Aprovecha Ahora!</h2>
+
+    <div class="slider">
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+
+        <div class="slides">
+            <div class="slide">
+                <img src="../imagen/promo-pizzaconpeppsi.png" alt="Promo pizza con Pepsi">
+            </div>
+            <div class="slide">
+                <img src="../imagen/promo-pizzacocacola.png" alt="Promo pizza con Coca Cola">
+            </div>
+        </div>
+
+        <label class="slider-btn prev" for="slide2">←</label>
+        <label class="slider-btn next" for="slide2">→</label>
+
+        <div class="dots">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+        </div>
+    </div>
+
+    <a href="formulario.html" class="btn-pedir" style="width:fit-content; margin: 0 auto;">Pedir Pizza Ahora</a>
+</section>
+
+    <main class="menu-container">
+
+        <h2 class="seccion-titulo"> Comidas</h2>
+        <section class="menu-grid">
+            <div class="card">
+                <img src="../imagen/pizza_hawaiana.png" alt="pizza">
+                <div class="card-info">
+                    <h3>Pizza Hawaiana</h3>
+                    <p>Deliciosa pizza con piña y jamón</p>
+                    <span class="precio">$25.000</span>
+                    <a href="formulario.html" class="btn-pedir">Pedir </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../imagen/hamburguesa.jpg" alt="Hamburguesa">
+                <div class="card-info">
+                    <h3>Hamburguesa</h3>
+                    <p>Carne a la parrilla con queso y vegetales frescos</p>
+                    <span class="precio">$15.000</span>
+                    <a href="formulario.html" class="btn-pedir">Pedir </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../imagen/perro caliente.jpg" alt="Perro Caliente">
+                <div class="card-info">
+                    <h3>Perro Caliente</h3>
+                    <p>Salchichas con pan y vegetales</p>
+                    <span class="precio">$10.000</span>
+                    <a href="formulario.html" class="btn-pedir">Pedir </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../imagen/burrito.jpg" alt="Burrito">
+                <div class="card-info">
+                    <h3>Burrito</h3>
+                    <p>rellena de carne, frijoles y queso</p>
+                    <span class="precio">$5.000</span>
+                    <a href="formulario.html" class="btn-pedir">Pedir </a>
+                </div>
+            </div>
+
+        </section>
+
+        <h2 class="seccion-titulo">🥤 Bebidas</h2>
+        <section class="menu-grid">
+
+            <div class="card">
+                <img src="../imagen/agua.jpg" alt="Agua">
+                <div class="card-info">
+                    <h3>Agua</h3>
+                    <p>Agua fría 500ml</p>
+                    <span class="precio">$2.000</span>
+                    <a href="formulario.html" class="btn-pedir">Pedir </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../imagen/cocaCola.jpg" alt="Coca Cola">
+                <div class="card-info">
+                    <h3>Coca Cola</h3>
+                    <p>Gaseosa fría 350ml</p>
+                    <span class="precio">$2.500</span>
+                    <a href="formulario.html" class="btn-pedir">Pedir </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../imagen/pepsi.jpg" alt="Pepsi">
+                <div class="card-info">
+                    <h3>Pepsi</h3>
+                    <p>Gaseosa fría 350ml</p>
+                    <span class="precio">$1.500</span>
+                    <a href="formulario.html" class="btn-pedir">Pedir </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../imagen/glacial.jpg" alt="Glacial">
+                <div class="card-info">
+                    <h3>Glacial</h3>
+                    <p>Glacial fría 330ml</p>
+                    <span class="precio">$5.000</span>
+                    <a href="formulario.html" class="btn-pedir">Pedir </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../imagen/aguila.jpg" alt="Águila">
+                <div class="card-info">
+                    <h3>Águila</h3>
+                    <p>Cerveza fría 330ml</p>
+                    <span class="precio">$2.000</span>
+                    <a href="formulario.html" class="btn-pedir">Pedir </a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>@2026 Pizzeria Juanchito · Villanueva, Bolívar</p>
+    </footer>
+
+</body>
+</html>

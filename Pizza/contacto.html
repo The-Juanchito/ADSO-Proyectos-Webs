@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Pizzeria Juanchito</title>
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <video muted autoplay loop>
+        <source src="./video/PIZZA.mp4" type="video/mp4">
+    </video>
+    <div class="capa"></div>
+
+    <header class="header">
+        <a class="btn-volver" href="index.html">← Volver</a>
+        <h1>📞 Contacto</h1>
+        <span></span>
+    </header>
+
+    <main class="contacto-container">
+
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="columna-izq">
+
+            <div class="glass-card">
+                <h2><i class='bx bxs-map'></i> Encuéntranos</h2>
+                <div class="info-item">
+                    <i class='bx bxs-map-pin'></i>
+                    <div>
+                        <strong>Dirección</strong>
+                        <p>Calle Principal #10-20, Villanueva, Bolívar</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class='bx bxs-phone'></i>
+                    <div>
+                        <strong>Teléfono</strong>
+                        <p>316 000 0000</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class='bx bxs-envelope'></i>
+                    <div>
+                        <strong>Correo</strong>
+                        <p>juanchito@pizzeria.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <h2>🕐 Horario de atención</h2>
+                <table class="horario-tabla">
+                    <tr>
+                        <td>Lunes - Viernes</td>
+                        <td><strong>11:00am - 10:00pm</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Sábado</td>
+                        <td><strong>11:00am - 11:00pm</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Domingo</td>
+                        <td><strong>12:00pm - 9:00pm</strong></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="glass-card">
+                <h2>📱 Redes sociales</h2>
+                <div class="redes">
+                    <a href="#" class="red instagram">
+                        <i class='bx bxl-instagram'></i> Instagram
+                    </a>
+                    <a href="#" class="red facebook">
+                        <i class='bx bxl-facebook'></i> Facebook
+                    </a>
+                    <a href="#" class="red whatsapp">
+                        <i class='bx bxl-whatsapp'></i> WhatsApp
+                    </a>
+                    <a href="#" class="red tiktok">
+                        <i class='bx bxl-tiktok'></i> TikTok
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- COLUMNA DERECHA -->
+        <div class="columna-der">
+
+            <div class="glass-card">
+                <h2>✉️ Envíanos un mensaje</h2>
+                <form class="contacto-form">
+                    <div class="campo">
+                        <label>Nombre</label>
+                        <div class="input-group">
+                            <i class='bx bxs-user'></i>
+                            <input type="text" placeholder="Tu nombre" required>
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label>Correo</label>
+                        <div class="input-group">
+                            <i class='bx bxs-envelope'></i>
+                            <input type="email" placeholder="tucorreo@gmail.com" required>
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label>Teléfono</label>
+                        <div class="input-group">
+                            <i class='bx bxs-phone'></i>
+                            <input type="tel" placeholder="314 000 0000">
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label>Mensaje</label>
+                        <textarea placeholder="¿En qué podemos ayudarte?" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-enviar">Enviar mensaje 📨</button>
+                </form>
+            </div>
+
+            <div class="glass-card">
+                <h2>🗺️ Ubicación</h2>
+                <div class="mapa-wrap">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.123456789!2d-74.7760!3d9.9833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwNTknMDAuMCJOIDc0wrA0NicxNi4wIlc!5e0!3m2!1ses!2sco!4v1620000000000!5m2!1ses!2sco"
+                        width="100%"
+                        height="220"
+                        style="border:0; border-radius:10px;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <p class="mapa-nota">📌 Villanueva, Bolívar, Colombia</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>@2026 Pizzeria Juanchito · Villanueva, Bolívar</p>
+    </footer>
+
+</body>
+</html>

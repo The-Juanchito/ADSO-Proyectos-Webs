@@ -1,0 +1,96 @@
+#hero {
+    min-height: 100vh;
+    position: relative;
+
+}
+video {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.capa {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    mix-blend-mode:overlay;
+
+}
+.promo {
+    padding-top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+.promo h1 {
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+.promo p {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.promo button {
+    margin-top: 20px;
+    padding: 15px 35px;
+    font-size: 18px;
+    color: white;
+    background-color: #e63c3c;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+.promo button:hover {
+    background-color: #1bcc47;
+    transform: scale(1.05);
+
+}
+header {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-size: bold;
+    margin-left: 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav ul li a {
+   text-decoration: none;
+   color: white;
+   font-size: 18px;
+   transition: 0.3s;
+}

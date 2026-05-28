@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../formulario/formulario.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Formulario Pizza Juanchito</title>
+</head>
+<body>
+
+    <!-- Botón volver va aquí, no en index.html -->
+    <a class="btn-volver" href="index.html">
+        <i class='bx bx-arrow-back'></i> Volver al inicio
+    </a>
+
+    <form>
+        <div class="formulario">
+            <h1>¡Bienvenido a Pizzeria Juanchito!</h1>
+            <p>Completa tus datos pizzero para que disfrutes de tu deliciosa PIZZA</p>
+
+            <div class="input-group">
+                <i class='bx bxs-user'></i>
+                <input type="text" placeholder="Nombre Completo" required>
+            </div>
+            <div class="input-group">
+                <i class='bx bxs-home'></i>
+                <input type="text" placeholder="Dirección: EJ: La Plaza donde la pela viejo" required>
+            </div>
+            <div class="input-group">
+                <i class='bx bxs-phone'></i>
+                <input type="text" placeholder="Teléfono: EJ: 300 123 4567" required>
+            </div>
+            <div class="input-group">
+                <i class='bx bxs-buildings'></i>
+                <input type="text" placeholder="Calle: EJ: Calle 123" required>
+            </div>
+            <div class="input-group">
+                <i class='bx bx-home-alt-2'></i>
+                <input type="text" placeholder="Domicilio: EJ: Apartamento 404" required>
+            </div>
+            <div class="input-group">
+                <i class='bx bxs-envelope'></i>
+                <input type="text" placeholder="Correo: EJ: juanchito@gmail.com">
+            </div>
+
+            <div class="tyc">
+                <input type="checkbox" id="terms" required>
+                <label for="terms"><a href="#" target="_blank">Acepto los términos y condiciones</a></label>
+            </div>
+
+            <div class="tamano">
+                <label for="tamano">Tamaño de la pizza:</label>
+                <select name="tamano" id="tamano" required>
+                    <option value="">Seleccionar tamaño de la pizza</option>
+                    <option value="small">Pequeña $25,000</option>
+                    <option value="medium">Mediana $45,000</option>
+                    <option value="large">Grande $65,000</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="extras">
+            <label class="extras-titulo">Ingredientes extras:</label>
+            <div class="extra-item">
+                <input type="checkbox" id="extra1" name="extra" value="extra1">
+                <label for="extra1">🧀 Queso extra $5,000</label>
+            </div>
+            <div class="extra-item">
+                <input type="checkbox" id="extra2" name="extra" value="extra2">
+                <label for="extra2">🍕 Pepperoni $7,000</label>
+            </div>
+            <div class="extra-item">
+                <input type="checkbox" id="extra3" name="extra" value="extra3">
+                <label for="extra3">🍄 Champiñones $4,000</label>
+            </div>
+        </div>
+
+        <div class="cobrodomicilio">
+            <input type="checkbox" id="domicilio">
+            <label for="domicilio" style="color: orangered;">🛵 Domicilio $10,000</label>
+        </div>
+
+        <button class="btn">¡Domicilio YA!</button>
+    </form>
+
+    <video src="./video/fondo.mp4" muted autoplay loop></video>
+
+</body>
+</html>
