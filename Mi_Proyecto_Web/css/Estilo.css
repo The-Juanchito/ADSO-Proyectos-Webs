@@ -1,0 +1,206 @@
+
+.contenedor{ /*Clase del contenedor*/
+        display:flex; /*Activa flexBox*/
+        justify-content: space-between; /*Espacios iguales */
+        gap:10px; /*Espacio entre  columnas de los elementos*/
+        padding: 10px; /*Borde Interno*/
+    }
+
+    .columna{ /*Clase de cada columna*/
+        flex: 1; /*Borde del mismo ancho*/
+        padding: 20px; /*Borde Interno*/
+        background-color:lightblue; /*Color de fondo*/
+        border: 1px solid; /*Borde Externo*/
+        text-align: justify; /*Alineación del texto*/
+    }
+
+    .navegador{ /*Clase del navegador*/
+        display:flex; /*Activa flexBox*/
+        justify-content: space-between; /*Espacios iguales */
+        gap:30px; /*Espacio entre  columnas de los elementos*/
+        padding: 10px; /*Borde Interno*/
+    }
+    .vinculos{ /*Clase de cada columna*/
+        flex: 1; /*Borde del mismo ancho*/
+        padding: 20px; /*Borde Interno*/
+        background-color:lightblue; /*Color de fondo*/
+        border: 2px solid; /*Borde Externo*/
+        text-align: center; /*Alineación del texto*/
+        border-radius: 10px; /*Bordes redondeados*/
+
+    }
+    a { /*Estilo de los enlaces*/
+        text-decoration: none; /*Quitar subrayado*/
+    }
+    .vinculos:hover{ /*Efecto al pasar el mouse por encima*/
+        background-color:maroon; /*Color de fondo al pasar el mouse*/
+        border-color:green; /*Color del borde al pasar el mouse*/
+        color:green; /*Color del texto al pasar el mouse*/
+    }
+    img { /*Estilo de las imágenes*/
+        display: block; /*Mostrar como bloque para centrar*/
+        margin: 0 auto; /*Centrar horizontalmente*/
+        max-width: 100%; /*Ajustar al ancho del contenedor*/
+        height: auto; /*Mantener proporción de la imagen*/
+    }
+    
+        .galeria{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+.galeria img{
+    width:300px;
+    height:200px;
+}
+
+
+body{
+    margin-left: 80px;
+}
+.arriba{
+    width:80px;
+    height:80px;
+}
+.arriba img{
+    width:80px;
+    height:80px;
+}
+
+
+.imagen-logo{
+    width: 40%;
+    height: 60%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container .btn-menu,
+.logo {
+float: left;
+line-height: 100px;
+}
+
+.container .btn-menu label {
+color: Black;
+font-size: 25px;
+cursor: pointer;
+}
+
+.container .menu {
+    float: right;
+    line-height: 100px;
+}
+.container .menu a {
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #8d93e2;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+.container .menu a:hover {
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+}
+
+
+#btn-menu {
+    display: none;
+}
+.container-menu {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu {
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu {
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu {
+    transform: translateX(0%);
+}
+.cont-menu nav {
+    transform: translateY(15%);
+}
+.cont-menu nav a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover {
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+.cont-menu label {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+
+body{
+    font-family: Arial;
+    background: lightblue;
+}
+
+.formulario{
+    width: 350px;
+    margin: 100px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+input{
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+button{
+    width: 95%;
+    padding: 10px;
+    margin-top: 15px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+a{
+    text-decoration: none;
+}
