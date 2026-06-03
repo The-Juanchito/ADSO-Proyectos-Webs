@@ -1,339 +1,257 @@
-/* IMPORTAR FUENTE DE GOOGLE */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* CONFIGURACION GENERAL */
-
-*{
-
-    /* Elimina espacios */
+* {
     margin: 0;
     padding: 0;
-
-    /* Mejor control del tamaño */
     box-sizing: border-box;
-
-    /* Fuente general */
     font-family: 'Poppins', sans-serif;
-
 }
 
-/* CUERPO DE LA PAGINA */
-
-body{
-
-    /* Altura completa */
-    height: 100vh;
-
-    /* Ocultar lo que salga */
-    overflow: hidden;
-
-    /* Fondo degradado */
+body {
+    min-height: 100vh;        
+    overflow-y: auto;          
     background: linear-gradient(135deg, #ff4e8a, #8f44fd);
-
-    /* Centrar contenido */
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding: 40px 20px;        
+    position: relative;
 }
 
-/* TARJETA PRINCIPAL */
-
-.tarjeta{
-
-    /* Ancho */
-    width: 380px;
-
-    /* Espaciado interno */
-    padding: 40px 30px;
-
-    /* Centrar texto */
-    text-align: center;
-
-    /* Fondo transparente */
-    background: rgba(255,255,255,0.15);
-
-    /* Efecto vidrio */
-    backdrop-filter: blur(10px);
-
-    /* Bordes redondos */
-    border-radius: 25px;
-
-    /* Borde transparente */
-    border: 1px solid rgba(255,255,255,0.3);
-
-    /* Color del texto */
-    color: white;
-
-    /* Sombra */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-
-    /* Prioridad */
-    z-index: 10;
-
-}
-
-/* TITULO */
-
-.tarjeta h1{
-
-    font-size: 35px;
-
-    margin-bottom: 15px;
-
-}
-
-/* NOMBRE */
-
-.tarjeta h2{
-
-    color: #ffe066;
-
-    font-size: 30px;
-
-    margin-bottom: 15px;
-
-}
-
-/* TEXTO */
-
-.tarjeta p{
-
-    line-height: 1.7;
-
-    margin-bottom: 30px;
-
-    font-size: 15px;
-
-}
-
-/* BOTON */
-
-.boton{
-
-    /* Mostrar como bloque */
-    display: inline-block;
-
-    /* Quitar linea */
-    text-decoration: none;
-
-    /* Fondo */
-    background: white;
-
-    /* Color texto */
-    color: #ff4e8a;
-
-    /* Espaciado */
-    padding: 12px 25px;
-
-    /* Bordes */
-    border-radius: 30px;
-
-    /* Negrita */
-    font-weight: bold;
-
-    /* Transicion suave */
-    transition: 0.3s;
-
-}
-
-/* EFECTO HOVER */
-
-.boton:hover{
-
-    background: #ffe066;
-
-    transform: scale(1.1);
-
-    box-shadow: 0 0 20px #ffe066;
-
-}
-
-/* GLOBOS */
-
-.globo{
-
-    position: absolute;
-
+.globo {
+    position: fixed; 
     width: 80px;
     height: 100px;
-
     border-radius: 50%;
-
     animation: flotar 6s infinite ease-in-out;
-
+    z-index: 0;                
 }
 
-/* CUERDA DEL GLOBO */
-
-.globo::before{
-
+.globo::before {
     content: '';
-
     position: absolute;
-
     width: 2px;
     height: 100px;
-
     background: white;
-
     top: 100px;
     left: 50%;
-
 }
 
-/* GLOBO 1 */
+.globo1 { background: #ff4e8a; left: 10%; top: 70%; }
+.globo2 { background: #00c2ff; left: 25%; top: 80%; animation-delay: 1s; }
+.globo3 { background: #ffe066; right: 20%; top: 75%; animation-delay: 2s; }
+.globo4 { background: #7dff7d; right: 8%; top: 80%; animation-delay: 3s; }
 
-.globo1{
-
-    background: #ff4e8a;
-
-    left: 10%;
-    top: 70%;
-
+@keyframes flotar {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-40px); }
+    100% { transform: translateY(0); }
 }
 
-/* GLOBO 2 */
-
-.globo2{
-
-    background: #00c2ff;
-
-    left: 25%;
-    top: 80%;
-
-    animation-delay: 1s;
-
+.tarjeta {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;              
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-/* GLOBO 3 */
+.tarjeta h1 { font-size: 30px; }
 
-.globo3{
+.tarjeta h2 {
+    color: #ffe066;
+    font-size: 26px;
+}
 
+.tarjeta p {
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.boton {
+    display: inline-block;
+    text-decoration: none;
+    background: white;
+    color: #ff4e8a;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton:hover {
     background: #ffe066;
-
-    right: 20%;
-    top: 75%;
-
-    animation-delay: 2s;
-
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ffe066;
 }
 
-/* GLOBO 4 */
-
-.globo4{
-
-    background: #7dff7d;
-
-    right: 8%;
-    top: 80%;
-
-    animation-delay: 3s;
-
+.nombre-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-/* ANIMACION GLOBOS */
-
-@keyframes flotar{
-
-    0%{
-
-        transform: translateY(0);
-
-    }
-
-    50%{
-
-        transform: translateY(-40px);
-
-    }
-
-    100%{
-
-        transform: translateY(0);
-
-    }
-
+.nombre-box input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    font-size: 15px;
+    text-align: center;
 }
 
+.nombre-box button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: white;
+    color: #ff4e8a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-/* PAGINA CARTA */
+.nombre-box button:hover {
+    background: #ffe066;
+    transform: scale(1.05);
+}
 
-.fondo-carta{
+.foto-box input {
+    width: 100%;
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #ff4e8a;
+    font-weight: bold;
+    border: none;
+}
 
-    /* Fondo */
+body.fondo-carta {
     background: linear-gradient(135deg, #ff758c, #ff7eb3);
-
-    /* Centrar */
     display: flex;
     justify-content: center;
-    align-items: center;
-
-    /* Altura */
+    align-items: flex-start;   
     min-height: 100vh;
-
-    padding: 20px;
-
+    overflow-y: auto;
+    padding: 40px 20px;
 }
 
-/* CONTENEDOR */
-
-.contenedor-carta{
-
-    width: 500px;
-
-    background: rgba(255,255,255,0.2);
-
+.contenedor-carta {
+    width: 100%;
+    max-width: 520px;
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-
+    -webkit-backdrop-filter: blur(10px);
     padding: 40px;
-
     border-radius: 25px;
-
     text-align: center;
-
     color: white;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
 
-/* TITULO */
+.contenedor-carta h1 { font-size: 36px; }
 
-.contenedor-carta h1{
-
-    margin-bottom: 20px;
-
-    font-size: 40px;
-
-}
-
-/* TEXTO */
-
-.contenedor-carta p{
-
+.contenedor-carta p {
     line-height: 1.9;
-
-    font-size: 17px;
-
-    margin-bottom: 30px;
-
+    font-size: 16px;
+    text-align: justify;
 }
 
-/* IMAGEN */
-
-.contenedor-carta img{
-
-    width: 250px;
-    height: 250px;
-
+.contenedor-carta img {
+    width: 220px;
+    height: 220px;
     object-fit: cover;
-
     border-radius: 20px;
-
     border: 4px solid white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+/* ── BOTONES REACCIÓN ── */
+.botones-reaccion {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+.btn-si,
+.btn-no {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.92rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
 
+.btn-si {
+    background: white;
+    color: #ff4e8a;
+}
+
+.btn-si:hover {
+    background: #ffe066;
+    transform: scale(1.07);
+    box-shadow: 0 0 16px #ffe066;
+}
+
+.btn-no {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-no:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(1.07);
+}
+
+/* ── MENSAJES DE REACCIÓN ── */
+.mensaje-reaccion {
+    width: 100%;
+}
+
+.mensaje-si {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    padding: 24px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: white;
+    animation: aparecer 0.4s ease;
+}
+
+.mensaje-no {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    padding: 24px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: white;
+    animation: aparecer 0.4s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
 }

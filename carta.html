@@ -1,31 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Para Ti 💖</title>
-    <link rel="stylesheet" href="FelizCumpleaños.css">
-
+    <link rel="stylesheet" href="FelizCumpleaños.css" />
 </head>
 <body class="fondo-carta">
-
     <div class="contenedor-carta">
-        <h1>💌 Para Ti 💌</h1>
-        <p>
-            Hoy quiero recordarte
-            lo especial que eres ✨
-            <br><br>
-            Que nunca te falten motivos
-            para sonreír 💖
-            <br><br>
-            Espero que este día quede guardado
-            en tu corazón 🌸</p>
-        <img src="imagenes/foto.jpg" alt="Foto Especial">
-        <br><br>
-        
-        <a href="FelizCumpleaños.html" class="boton">
-            Volver 🎀</a>
+    <h1>💌 Para Ti 💌</h1>
+    <p>
+        ✨ 💖 Querida Michell: Hoy queremos dedicarte estas palabras para
+        expresarte lo mucho que significas para nosotros. Eres una persona
+        especial que siempre aporta alegría, amabilidad y buenos momentos a
+        quienes te rodean. Agradecemos tu amistad, tu compañerismo y la forma en
+        que haces que cada día sea mejor con tu actitud y tu sonrisa (aunque
+        siempre eres grosera). Hemos compartido experiencias, aprendizajes y
+        momentos que recordaremos con cariño. Queremos que sepas que te
+        apreciamos mucho y que valoramos la persona que eres. Esperamos que
+        sigas alcanzando todas tus metas y sueños, si te lo propones; porque
+        sabemos que tienes la capacidad de lograr grandes cosas. Gracias por
+        existir y aparecer en nuestras vidas. Te deseamos mucha felicidad, éxito
+        y bendiciones en cada paso que des. Con mucho cariño y aprecio, Tus
+        compañeros🌸
+        <br /><br />
+        Nunca olvides que cuentas con nosotros y que te queremos muchísimo.
+        Esperamos que disfrutes este día rodeada de las personas que más te
+        quieren y que guardes hermosos recuerdos de esta celebración. ¡Feliz
+        cumpleaños, Michell! 🎉🎂🎈
+    </p>
+
+    <img
+        id="fotoMostrada"
+        src="https://via.placeholder.com/250"
+        alt="Foto Especial"/>
+    <br /><br />
+
+<div class="botones-reaccion">
+    <button class="btn-si" onclick="reaccion('si')">💖 ¡Me encantó el regalo!</button>
+    <button class="btn-no" onclick="reaccion('no')">😅 No me gustó</button>
+</div>
+
+<div class="mensaje-reaccion" id="mensajeReaccion"></div>
+
+    <a href="FelizCumpleaños.html" class="boton"> Volver 🎀</a>
     </div>
 
+    <script>
+    window.onload = function () {
+        let foto = localStorage.getItem("fotoCumple");
+
+        if (foto) {
+        document.getElementById("fotoMostrada").src = foto;
+        }
+    };
+    function reaccion(tipo) {
+    const caja = document.getElementById('mensajeReaccion');
+
+    if (tipo === 'si') {
+        caja.innerHTML = `
+            <div class="mensaje-si">
+                🎉 ¡Qué bueno que te encantó el regalo! 🎁<br><br>
+                Espero que tengas un día genial,
+                lleno de alegría, risas y momentos
+                increíbles que recuerdes siempre. 💖✨
+                <br><br>
+                ¡Te lo mereces todo, Michell! 🌸🎂
+            </div>
+        `;
+    } else {
+        caja.innerHTML = `
+            <div class="mensaje-no">
+                😅 ¡Uy, lo sentimos mucho!<br><br>
+                La próxima vez lo haremos mejor, 
+                ¡te lo prometemos! 😂💪<br><br>
+                Pero igual... ¡Feliz cumpleaños! 🎉🎈
+            </div>
+        `;
+    }
+
+    caja.scrollIntoView({ behavior: 'smooth' });
+}
+    </script>
+
+    
 </body>
 </html>
