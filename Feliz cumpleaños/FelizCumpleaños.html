@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <link rel="stylesheet" href="FelizCumpleaños.css">
+
+</head>
+<body>
+
+    <div class="globos">
+        <div class="globo globo1"></div>
+        <div class="globo globo2"></div>
+        <div class="globo globo3"></div>
+        <div class="globo globo4"></div>
+    </div>
+
+    <div class="tarjeta">
+        <h1>🎉 Feliz Cumpleaños 🎉</h1>
+
+<div class="nombre-box">
+
+    <input 
+        type="text" 
+        id="nombreInput"
+        placeholder="Ingresa el nombre ✨"
+    >
+
+    <button onclick="guardarNombre()">
+        Guardar 💖
+    </button>
+
+</div>
+
+<h2 id="nombreMostrado">
+    Your Name
+</h2>
+
+    <!-- SUBIR FOTO -->
+
+<div class="foto-box">
+
+    <input 
+        type="file" 
+        id="fotoInput"
+        accept="image/*"
+        onchange="guardarFoto()"
+    >
+
+</div>
+
+        <p>
+            Hoy es un día muy especial ✨
+            <br><br>
+            Espero que la felicidad,
+            la alegría y los buenos momentos
+            siempre acompañen tu vida 💖
+        </p>
+
+        <a href="carta.html" class="boton">
+            Mis Mejores Deseos 💌</a>
+    </div>
+
+    <script>
+
+    function guardarNombre(){
+        let nombre = document.getElementById("nombreInput").value;
+        document.getElementById("nombreMostrado").innerText = nombre;
+        localStorage.setItem("nombreCumple", nombre);
+
+    }
+
+    window.onload = function(){
+
+        let nombreGuardado = localStorage.getItem("nombreCumple");
+
+        if(nombreGuardado){
+
+            document.getElementById("nombreMostrado").innerText = nombreGuardado;
+
+        }
+
+    }
+
+    // FUNCION PARA GUARDAR FOTO
+
+function guardarFoto(){
+
+    // Obtener archivo
+    let archivo = document.getElementById("fotoInput").files[0];
+
+    // Leer imagen
+    let lector = new FileReader();
+
+    lector.onload = function(e){
+
+        // Guardar imagen
+        localStorage.setItem("fotoCumple", e.target.result);
+
+    }
+
+    lector.readAsDataURL(archivo);
+
+}
+
+</script>
+
+</body>
+</html>
