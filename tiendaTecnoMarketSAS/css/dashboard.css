@@ -1,0 +1,109 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f2f2f2;
+}
+
+.contenedor{
+    width:95%;
+    margin:30px auto;
+}
+
+h2{
+    text-align:center;
+    color:#0d6efd;
+    margin-bottom:25px;
+}
+
+.tabla-responsive{
+    width:100%;
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    min-width:1100px;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+}
+
+th{
+    background:#198754;
+    color:white;
+    padding:12px;
+    border:1px solid #ddd;
+}
+
+td{
+    padding:10px;
+    border:1px solid #ddd;
+    text-align:center;
+    white-space:nowrap;
+}
+
+tr:nth-child(even){
+    background:#f8f9fa;
+}
+
+tr:hover{
+    background:#e9ecef;
+}
+
+img{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    border-radius:6px;
+}
+
+.acciones{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:6px;
+}
+
+.btnEditar{
+    background:#ffc107;
+    color:#000;
+    padding:5px 8px;
+    border-radius:5px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.btnEditar:hover{
+    background:#e0a800;
+}
+
+.btnEliminar{
+    background:#dc3545;
+    color:white;
+    padding:5px 8px;
+    border-radius:5px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.btnEliminar:hover{
+    background:#bb2d3b;
+}
+
+.btnVolver{
+    display:block;
+    width:220px;
+    margin:25px auto;
+    padding:12px;
+    text-align:center;
+    background:#0d6efd;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.btnVolver:hover{
+    background:#0b5ed7;
+}
