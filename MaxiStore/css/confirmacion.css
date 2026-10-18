@@ -1,0 +1,500 @@
+```css
+/* =====================================================
+   CONFIRMACIÓN DE PEDIDO - MAXISTORE
+===================================================== */
+
+.confirmacion-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+
+/* =====================================================
+   CABECERA DE CONFIRMACIÓN
+===================================================== */
+
+.confirmacion-header {
+    background: #ffffff;
+    border: 1px solid #dfe5ec;
+    border-radius: 12px;
+    padding: 35px 25px;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.confirmacion-icono {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eaf3ff;
+    color: #0074F3;
+
+    font-size: 42px;
+}
+
+.confirmacion-header h1 {
+    margin: 0 0 12px;
+
+    color: #042C6F;
+
+    font-size: 30px;
+}
+
+.confirmacion-header p {
+    margin: 0;
+
+    color: #555;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   NUMERO DE PEDIDO
+===================================================== */
+
+.numero-pedido {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 10px 18px;
+
+    background: #f4f8fc;
+
+    border-radius: 6px;
+
+    color: #042C6F;
+
+    font-weight: bold;
+
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   CONTENEDOR PRINCIPAL
+===================================================== */
+
+.confirmacion-grid {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 25px;
+}
+
+
+/* =====================================================
+   TARJETAS
+===================================================== */
+
+.confirmacion-card {
+    background: #ffffff;
+
+    border: 1px solid #dfe5ec;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.confirmacion-card h2 {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 0 0 20px;
+
+    color: #042C6F;
+
+    font-size: 21px;
+
+    border-bottom: 1px solid #dfe5ec;
+
+    padding-bottom: 15px;
+}
+
+.confirmacion-card h2 i {
+    color: #0074F3;
+}
+
+
+/* =====================================================
+   PRODUCTOS
+===================================================== */
+
+.producto-confirmacion {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+.producto-confirmacion:last-child {
+    border-bottom: none;
+}
+
+.producto-confirmacion img {
+    width: 85px;
+    height: 85px;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+    border: 1px solid #e1e6ec;
+
+    background: #ffffff;
+}
+
+.producto-info {
+    flex: 1;
+}
+
+.producto-info h3 {
+    margin: 0 0 7px;
+
+    color: #042C6F;
+
+    font-size: 17px;
+}
+
+.producto-info p {
+    margin: 4px 0;
+
+    color: #666;
+
+    font-size: 14px;
+}
+
+.producto-precio {
+    color: #0074F3;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   TOTAL
+===================================================== */
+
+.total-confirmacion {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top: 2px solid #042C6F;
+
+    color: #042C6F;
+
+    font-size: 23px;
+
+    font-weight: bold;
+}
+
+.total-confirmacion .total-valor {
+    color: #0074F3;
+}
+
+
+/* =====================================================
+   DATOS DE ENVÍO
+===================================================== */
+
+.dato-envio {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+.dato-envio:last-child {
+    border-bottom: none;
+}
+
+.dato-envio i {
+    width: 22px;
+
+    color: #0074F3;
+
+    font-size: 18px;
+}
+
+.dato-envio strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #042C6F;
+
+    font-size: 14px;
+}
+
+.dato-envio span {
+    color: #555;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   PAGO
+===================================================== */
+
+.pago-card {
+    background: linear-gradient(
+        135deg,
+        #042C6F,
+        #0074F3
+    );
+
+    color: #ffffff;
+
+    border: none;
+}
+
+.pago-card h2 {
+    color: #ffffff;
+
+    border-bottom-color: rgba(255,255,255,0.25);
+}
+
+.pago-card h2 i {
+    color: #ffffff;
+}
+
+.pago-card p {
+    color: #ffffff;
+
+    line-height: 1.6;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.botones-confirmacion {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 22px;
+}
+
+.btn-paypal {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    width: 100%;
+
+    padding: 14px 20px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    color: #042C6F;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+.btn-paypal:hover {
+    background: #f0f5fb;
+
+    transform: translateY(-1px);
+}
+
+.btn-cancelar {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    padding: 13px 20px;
+
+    box-sizing: border-box;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    border: 1px solid rgba(255,255,255,0.6);
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+.btn-cancelar:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+
+/* =====================================================
+   ESTADO DEL PEDIDO
+===================================================== */
+
+.estado-pedido {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding: 13px 15px;
+
+    background: #fff8e1;
+
+    border: 1px solid #ffe082;
+
+    border-radius: 7px;
+
+    color: #765900;
+
+    font-size: 14px;
+}
+
+.estado-pedido i {
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .confirmacion-container {
+        margin: 20px auto;
+
+        padding: 12px;
+    }
+
+    .confirmacion-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .confirmacion-header {
+        padding: 28px 18px;
+    }
+
+    .confirmacion-header h1 {
+        font-size: 24px;
+    }
+
+    .confirmacion-card {
+        padding: 20px;
+    }
+
+    .producto-confirmacion {
+        align-items: flex-start;
+    }
+
+    .producto-confirmacion img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .producto-precio {
+        font-size: 15px;
+    }
+
+    .total-confirmacion {
+        font-size: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   PANTALLAS MUY PEQUEÑAS
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .producto-confirmacion {
+        flex-wrap: wrap;
+    }
+
+    .producto-precio {
+        width: 100%;
+
+        padding-left: 88px;
+    }
+
+    .confirmacion-icono {
+        width: 65px;
+        height: 65px;
+
+        font-size: 35px;
+    }
+
+}

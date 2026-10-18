@@ -1,0 +1,955 @@
+
+/* =====================================================
+   MAXISTORE - MENÚ PRINCIPAL
+   menu.css
+=====================================================
+
+   COLORES:
+
+   Azul:          #0074F3
+   Azul oscuro:   #042C6F
+   Azul claro:    #EAF3FF
+   Blanco:        #FFFFFF
+   Negro:         #111111
+   Gris:          #666666
+   Borde:         #DFE5EC
+
+===================================================== */
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --menu-azul: #0074F3;
+
+    --menu-azul-oscuro: #042C6F;
+
+    --menu-azul-claro: #EAF3FF;
+
+    --menu-blanco: #FFFFFF;
+
+    --menu-negro: #111111;
+
+    --menu-gris: #666666;
+
+    --menu-gris-claro: #F5F7FA;
+
+    --menu-borde: #DFE5EC;
+
+    --menu-rojo: #D32F2F;
+
+}
+
+
+/* =====================================================
+   MENÚ PRINCIPAL
+===================================================== */
+
+.menu-principal {
+
+    width: 100%;
+
+    min-height: 72px;
+
+    padding: 8px 40px;
+
+    background:
+        var(--menu-blanco);
+
+    border-bottom:
+        1px solid var(--menu-borde);
+
+    box-shadow:
+        0 2px 10px
+        rgba(
+            0,
+            0,
+            0,
+            0.04
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 3000;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.menu-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+
+.menu-logo a {
+
+    display: flex;
+
+    align-items: center;
+
+    text-decoration: none;
+}
+
+
+.menu-logo img {
+
+    width: 110px;
+
+    height: 52px;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.menu-logo a:hover img {
+
+    transform:
+        scale(1.04);
+}
+
+
+/* =====================================================
+   CONTENIDO DEL MENÚ
+===================================================== */
+
+.menu-contenido {
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 4px;
+}
+
+
+/* =====================================================
+   ENLACES
+===================================================== */
+
+.menu-enlace {
+
+    min-height: 44px;
+
+    padding: 0 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border-radius: 8px;
+
+    color:
+        var(--menu-gris);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.menu-enlace i {
+
+    font-size: 18px;
+
+    flex-shrink: 0;
+}
+
+
+.menu-enlace:hover {
+
+    color:
+        var(--menu-azul);
+
+    background:
+        var(--menu-azul-claro);
+}
+
+
+.menu-enlace:active {
+
+    transform:
+        scale(0.97);
+}
+
+
+/* =====================================================
+   CARRITO
+===================================================== */
+
+.menu-carrito {
+
+    margin-left: 2px;
+
+}
+
+
+.menu-icono-carrito {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =====================================================
+   CONTADOR CARRITO
+===================================================== */
+
+.menu-contador {
+
+    position: absolute;
+
+    top: -10px;
+
+    right: -12px;
+
+    min-width: 18px;
+
+    height: 18px;
+
+    padding: 0 5px;
+
+    border-radius: 50px;
+
+    background:
+        var(--menu-azul);
+
+    color:
+        var(--menu-blanco);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+    border:
+        2px solid
+        var(--menu-blanco);
+}
+
+
+/* =====================================================
+   ADMINISTRACIÓN
+===================================================== */
+
+.menu-admin {
+
+    color:
+        var(--menu-azul);
+}
+
+
+.menu-admin:hover {
+
+    color:
+        var(--menu-azul-oscuro);
+
+    background:
+        var(--menu-azul-claro);
+}
+
+
+/* =====================================================
+   CERRAR SESIÓN
+===================================================== */
+
+.menu-salir {
+
+    color:
+        var(--menu-rojo);
+}
+
+
+.menu-salir:hover {
+
+    color:
+        var(--menu-rojo);
+
+    background:
+        #FEF2F2;
+}
+
+
+/* =====================================================
+   BOTÓN HAMBURGUESA
+===================================================== */
+
+.menu-boton {
+
+    display: none;
+
+    width: 44px;
+
+    height: 44px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        var(--menu-azul);
+
+    color:
+        var(--menu-blanco);
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.menu-boton:hover {
+
+    background:
+        var(--menu-azul-oscuro);
+}
+
+
+.menu-boton:active {
+
+    transform:
+        scale(0.94);
+}
+
+
+.menu-boton.menu-activo {
+
+    background:
+        var(--menu-azul-oscuro);
+}
+
+
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.menu-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(
+            4,
+            44,
+            111,
+            0.30
+        );
+
+    z-index: 2500;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+
+.menu-overlay.menu-abierto {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* =====================================================
+   BLOQUEAR SCROLL
+===================================================== */
+
+body.menu-bloqueado {
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .menu-principal {
+
+        padding:
+            8px 25px;
+
+        gap: 15px;
+    }
+
+
+    .menu-contenido {
+
+        gap: 1px;
+    }
+
+
+    .menu-enlace {
+
+        padding:
+            0 9px;
+
+        font-size: 13px;
+    }
+
+
+    .menu-enlace i {
+
+        font-size: 17px;
+    }
+
+
+    .menu-logo img {
+
+        width: 100px;
+
+        height: 48px;
+    }
+
+}
+
+
+/* =====================================================
+   MÓVIL
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .menu-principal {
+
+        min-height: 68px;
+
+        padding:
+            8px 18px;
+
+        position: sticky;
+
+        top: 0;
+    }
+
+
+    /* =================================================
+       LOGO
+    ================================================= */
+
+    .menu-logo img {
+
+        width: 95px;
+
+        height: 45px;
+    }
+
+
+    /* =================================================
+       BOTÓN
+    ================================================= */
+
+    .menu-boton {
+
+        display: flex;
+
+        margin-left: auto;
+
+        position: relative;
+
+        z-index: 3100;
+    }
+
+
+    /* =================================================
+       MENÚ LATERAL
+    ================================================= */
+
+    .menu-contenido {
+
+        position: fixed;
+
+        top: 68px;
+
+        right: 0;
+
+        width:
+            min(
+                330px,
+                88vw
+            );
+
+        height:
+            calc(
+                100vh - 68px
+            );
+
+        padding:
+            18px 15px 25px;
+
+        background:
+            var(--menu-blanco);
+
+        border-left:
+            1px solid
+            var(--menu-borde);
+
+        box-shadow:
+            -8px 0 25px
+            rgba(
+                0,
+                0,
+                0,
+                0.10
+            );
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        justify-content: flex-start;
+
+        gap: 5px;
+
+        overflow-y: auto;
+
+        margin: 0;
+
+        z-index: 3000;
+
+        transform:
+            translateX(105%);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transition:
+            transform 0.25s ease,
+            opacity 0.25s ease,
+            visibility 0.25s ease;
+    }
+
+
+    /* =================================================
+       MENÚ ABIERTO
+    ================================================= */
+
+    .menu-contenido.menu-abierto {
+
+        transform:
+            translateX(0);
+
+        opacity: 1;
+
+        visibility: visible;
+    }
+
+
+    /* =================================================
+       ENLACES MÓVILES
+    ================================================= */
+
+    .menu-enlace {
+
+        width: 100%;
+
+        min-height: 50px;
+
+        justify-content: flex-start;
+
+        padding:
+            0 16px;
+
+        border-radius: 9px;
+
+        font-size: 14px;
+    }
+
+
+    .menu-enlace i {
+
+        width: 24px;
+
+        text-align: center;
+
+        font-size: 19px;
+    }
+
+
+    .menu-enlace:hover {
+
+        transform:
+            translateX(3px);
+    }
+
+
+    /* =================================================
+       CARRITO
+    ================================================= */
+
+    .menu-carrito {
+
+        margin-left: 0;
+    }
+
+
+    /* =================================================
+       CONTADOR
+    ================================================= */
+
+    .menu-contador {
+
+        top: -8px;
+
+        right: -10px;
+    }
+
+
+    /* =================================================
+       ADMIN
+    ================================================= */
+
+    .menu-admin {
+
+        margin-top: 5px;
+
+        border-top:
+            1px solid
+            var(--menu-borde);
+
+        border-radius: 0;
+
+        padding-top: 12px;
+    }
+
+
+    /* =================================================
+       SALIR
+    ================================================= */
+
+    .menu-salir {
+
+        margin-top: 5px;
+
+        border-top:
+            1px solid
+            var(--menu-borde);
+
+        border-radius: 0;
+
+        padding-top: 12px;
+    }
+
+}
+
+
+/* =====================================================
+   MÓVIL PEQUEÑO
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .menu-principal {
+
+        padding:
+            7px 13px;
+    }
+
+
+    .menu-logo img {
+
+        width: 85px;
+
+        height: 42px;
+    }
+
+
+    .menu-boton {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 23px;
+    }
+
+
+    .menu-contenido {
+
+        top: 66px;
+
+        height:
+            calc(
+                100vh - 66px
+            );
+
+        width: 90vw;
+    }
+
+}
+
+
+/* =====================================================
+   ACCESIBILIDAD
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .menu-principal *,
+    .menu-overlay {
+
+        transition: none !important;
+    }
+
+}
+
+
+/* =====================================================
+   CORRECCIÓN DEL ENCABEZADO MAXISTORE
+===================================================== */
+
+/* El encabezado contiene la barra y el panel móvil */
+.menu-principal {
+    display: block;
+    width: 100%;
+    min-height: 72px;
+    padding: 0;
+    background: #ffffff;
+    border-bottom: 1px solid #DFE5EC;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 3000;
+}
+
+/* Logo y navegación en una sola fila */
+.menu-barra {
+    width: 100%;
+    min-height: 72px;
+    padding: 8px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+/* Tamaño correcto del logo */
+.menu-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.menu-logo img {
+    display: block;
+    width: 145px;
+    height: 54px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.menu-logo:hover img {
+    transform: scale(1.03);
+}
+
+/* Navegación horizontal para computadores */
+.menu-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-left: auto;
+}
+
+.menu-desktop .menu-enlace {
+    min-height: 44px;
+    padding: 0 12px;
+}
+
+/* El panel móvil no debe aparecer en computadores */
+.menu-contenido {
+    display: none;
+}
+
+/* El overlay tampoco debe ocupar espacio */
+.menu-overlay {
+    position: fixed;
+}
+
+/* Ajustes para tabletas */
+@media (max-width: 1000px) {
+    .menu-barra {
+        padding: 8px 22px;
+        gap: 12px;
+    }
+
+    .menu-logo img {
+        width: 120px;
+    }
+
+    .menu-desktop .menu-enlace {
+        padding: 0 8px;
+        font-size: 13px;
+    }
+}
+
+/* Menú lateral en celulares */
+@media (max-width: 850px) {
+    .menu-barra {
+        min-height: 68px;
+        padding: 8px 18px;
+    }
+
+    .menu-desktop {
+        display: none;
+    }
+
+    .menu-boton {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .menu-contenido {
+        display: flex;
+        position: fixed;
+        top: 68px;
+        right: 0;
+        bottom: 0;
+        width: min(330px, 88vw);
+        height: auto;
+        padding: 18px 15px 25px;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 5px;
+        overflow-y: auto;
+        margin: 0;
+        background: #ffffff;
+        border-left: 1px solid #DFE5EC;
+        box-shadow: -8px 0 25px rgba(0, 0, 0, 0.10);
+        z-index: 3000;
+        transform: translateX(105%);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+            transform 0.25s ease,
+            opacity 0.25s ease,
+            visibility 0.25s ease;
+    }
+
+    .menu-contenido.menu-abierto {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-contenido .menu-enlace {
+        width: 100%;
+        min-height: 50px;
+        justify-content: flex-start;
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .menu-barra {
+        padding: 7px 13px;
+    }
+
+    .menu-logo img {
+        width: 100px;
+        height: 44px;
+    }
+
+    .menu-contenido {
+        top: 66px;
+        width: 90vw;
+    }
+}
+
+/* Ajuste del logo de MaxiStore */
+.menu-barra .menu-logo img {
+    width: 105px;
+    height: 45px;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 850px) {
+    .menu-barra .menu-logo img {
+        width: 95px;
+        height: 42px;
+    }
+}

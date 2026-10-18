@@ -1,0 +1,555 @@
+
+/* =====================================================
+   CARRITO
+===================================================== */
+
+.carrito {
+
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 20px;
+
+}
+
+
+.carrito h1 {
+
+    text-align: center;
+
+    color: #042C6F;
+
+    margin-bottom: 35px;
+
+}
+
+
+
+/* =====================================================
+   PRODUCTO
+===================================================== */
+
+.producto-carrito {
+
+    display: flex;
+
+    gap: 25px;
+
+    background: white;
+
+    border: 1px solid #dfe5ec;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,0.06);
+
+}
+
+
+
+/* =====================================================
+   IMAGEN
+===================================================== */
+
+.imagen-carrito {
+
+    width: 180px;
+
+    min-width: 180px;
+
+    height: 180px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f8fafc;
+
+    border-radius: 10px;
+
+}
+
+
+.imagen-carrito img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+}
+
+
+
+/* =====================================================
+   INFORMACIÓN
+===================================================== */
+
+.info-carrito {
+
+    flex: 1;
+
+}
+
+
+.info-carrito h2 {
+
+    color: #042C6F;
+
+    margin-bottom: 12px;
+
+}
+
+
+.info-carrito p {
+
+    margin: 8px 0;
+
+    color: #555;
+
+}
+
+
+.info-carrito strong {
+
+    color: #042C6F;
+
+}
+
+
+
+/* =====================================================
+   STOCK
+===================================================== */
+
+.stock {
+
+    margin-top: 10px;
+
+    font-size: 14px;
+
+}
+
+
+.stock strong {
+
+    color: #0074F3;
+
+}
+
+
+.stock-agotado {
+
+    color: #d00000 !important;
+
+    font-weight: bold;
+
+}
+
+
+
+/* =====================================================
+   CANTIDAD
+===================================================== */
+
+.cantidad {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+}
+
+
+.cantidad > span:first-child {
+
+    font-weight: bold;
+
+    color: #042C6F;
+
+}
+
+
+.cantidad button {
+
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #0074F3;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.2s;
+
+}
+
+
+.cantidad button:hover {
+
+    background: #042C6F;
+
+}
+
+
+.cantidad button:disabled {
+
+    background: #bfc7d1;
+
+    cursor: not-allowed;
+
+}
+
+
+.numero {
+
+    min-width: 35px;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #042C6F;
+
+}
+
+
+
+/* =====================================================
+   SUBTOTAL
+===================================================== */
+
+.subtotal {
+
+    margin-top: 18px !important;
+
+    font-size: 18px;
+
+}
+
+
+.subtotal strong {
+
+    color: #0074F3;
+
+}
+
+
+
+/* =====================================================
+   ELIMINAR
+===================================================== */
+
+.btn-eliminar {
+
+    margin-top: 10px;
+
+    padding: 10px 15px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #111;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+
+}
+
+
+.btn-eliminar:hover {
+
+    background: #042C6F;
+
+}
+
+
+
+/* =====================================================
+   RESUMEN
+===================================================== */
+
+.resumen-carrito {
+
+    background: white;
+
+    border: 1px solid #dfe5ec;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    margin-top: 30px;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,0.06);
+
+}
+
+
+.resumen-carrito h2 {
+
+    color: #042C6F;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* =====================================================
+   TOTAL
+===================================================== */
+
+.total {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #042C6F;
+
+    border-top: 1px solid #dfe5ec;
+
+    padding-top: 20px;
+
+    margin-top: 15px;
+
+}
+
+
+.total strong {
+
+    color: #0074F3;
+
+}
+
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.botones-compra {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+}
+
+
+.btn-comprar {
+
+    flex: 1;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    padding: 14px;
+
+    border-radius: 7px;
+
+    background: #0074F3;
+
+    color: white;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+
+}
+
+
+.btn-comprar:hover {
+
+    background: #042C6F;
+
+}
+
+
+.btn-seguir {
+
+    background: #111;
+
+}
+
+
+.btn-seguir:hover {
+
+    background: #333;
+
+}
+
+
+
+/* =====================================================
+   CARRITO VACÍO
+===================================================== */
+
+.carrito-vacio {
+
+    text-align: center;
+
+    background: white;
+
+    border: 1px solid #dfe5ec;
+
+    border-radius: 12px;
+
+    padding: 50px 20px;
+
+}
+
+
+.carrito-vacio h2 {
+
+    color: #042C6F;
+
+    margin-bottom: 10px;
+
+}
+
+
+.carrito-vacio p {
+
+    color: #666;
+
+    margin-bottom: 20px;
+
+}
+
+
+.carrito-vacio a {
+
+    display: inline-block;
+
+    background: #0074F3;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+
+/* =====================================================
+   MENSAJE
+===================================================== */
+
+#mensaje {
+
+    position: fixed;
+
+    top: 20px;
+
+    right: 20px;
+
+    background: #042C6F;
+
+    color: white;
+
+    padding: 14px 20px;
+
+    border-radius: 8px;
+
+    display: none;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.2);
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .producto-carrito {
+
+        flex-direction: column;
+
+    }
+
+
+    .imagen-carrito {
+
+        width: 100%;
+
+        height: 220px;
+
+    }
+
+
+    .botones-compra {
+
+        flex-direction: column;
+
+    }
+
+
+    .total {
+
+        font-size: 20px;
+
+    }
+
+}

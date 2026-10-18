@@ -1,0 +1,634 @@
+/* =====================================================
+   MIS PEDIDOS
+===================================================== */
+
+.pedidos-contenedor {
+
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 20px;
+
+}
+
+
+/* =====================================================
+   VOLVER
+===================================================== */
+
+.pedidos-contenedor .volver {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #0074F3;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    margin-bottom: 30px;
+
+}
+
+
+.pedidos-contenedor .volver:hover {
+
+    color: #042C6F;
+
+}
+
+
+
+/* =====================================================
+   TITULO
+===================================================== */
+
+.pedidos-titulo {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.pedidos-titulo span {
+
+    color: #0074F3;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.pedidos-titulo h1 {
+
+    margin: 8px 0;
+
+    color: #042C6F;
+
+    font-size: 32px;
+
+}
+
+
+.pedidos-titulo p {
+
+    color: #666;
+
+    margin: 0;
+
+}
+
+
+
+/* =====================================================
+   LISTA
+===================================================== */
+
+.pedidos-lista {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+
+/* =====================================================
+   TARJETA
+===================================================== */
+
+.pedido-card {
+
+    background: #FFFFFF;
+
+    border: 1px solid #dfe5ec;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,0.06);
+
+    transition: 0.2s;
+
+}
+
+
+.pedido-card:hover {
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.10);
+
+}
+
+
+
+/* =====================================================
+   CABECERA
+===================================================== */
+
+.pedido-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #dfe5ec;
+
+}
+
+
+.pedido-label {
+
+    color: #777;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+.pedido-header h2 {
+
+    margin: 4px 0 0;
+
+    color: #042C6F;
+
+    font-size: 25px;
+
+}
+
+
+
+/* =====================================================
+   ESTADOS
+===================================================== */
+
+.estado-pedido {
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+
+.estado-pendiente {
+
+    background: #fff4cc;
+
+    color: #8a6500;
+
+}
+
+
+.estado-pagado {
+
+    background: #e6f7ed;
+
+    color: #168044;
+
+}
+
+
+.estado-enviado {
+
+    background: #e7f1ff;
+
+    color: #0067c5;
+
+}
+
+
+.estado-entregado {
+
+    background: #dff7e8;
+
+    color: #14783d;
+
+}
+
+
+.estado-cancelado {
+
+    background: #ffe7e7;
+
+    color: #c62828;
+
+}
+
+
+
+/* =====================================================
+   INFORMACIÓN
+===================================================== */
+
+.pedido-informacion {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+}
+
+
+.dato-pedido {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.dato-pedido > i {
+
+    font-size: 24px;
+
+    color: #0074F3;
+
+}
+
+
+.dato-pedido div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+
+.dato-pedido span {
+
+    color: #777;
+
+    font-size: 13px;
+
+}
+
+
+.dato-pedido strong {
+
+    color: #042C6F;
+
+    font-size: 15px;
+
+}
+
+
+.dato-total strong {
+
+    color: #0074F3;
+
+    font-size: 18px;
+
+}
+
+
+
+/* =====================================================
+   ESTADO PAGO
+===================================================== */
+
+.pago-pendiente {
+
+    color: #8a6500 !important;
+
+}
+
+
+.pago-confirmado {
+
+    color: #168044 !important;
+
+}
+
+
+.pago-cancelado {
+
+    color: #c62828 !important;
+
+}
+
+
+
+/* =====================================================
+   TRANSACCIÓN
+===================================================== */
+
+.transaccion {
+
+    background: #f5f8fc;
+
+    border-radius: 7px;
+
+    padding: 12px 15px;
+
+    color: #555;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+.transaccion i {
+
+    color: #168044;
+
+    margin-right: 5px;
+
+}
+
+
+.transaccion strong {
+
+    color: #042C6F;
+
+}
+
+
+
+/* =====================================================
+   ACCIONES
+===================================================== */
+
+.pedido-acciones {
+
+    display: flex;
+
+    gap: 12px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #dfe5ec;
+
+}
+
+
+.btn-ver-pedido,
+.btn-seguir-comprando {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+
+}
+
+
+.btn-ver-pedido {
+
+    background: #0074F3;
+
+    color: #FFFFFF;
+
+}
+
+
+.btn-ver-pedido:hover {
+
+    background: #042C6F;
+
+}
+
+
+.btn-seguir-comprando {
+
+    background: #111111;
+
+    color: #FFFFFF;
+
+}
+
+
+.btn-seguir-comprando:hover {
+
+    background: #333333;
+
+}
+
+
+
+/* =====================================================
+   SIN PEDIDOS
+===================================================== */
+
+.sin-pedidos {
+
+    background: #FFFFFF;
+
+    border: 1px solid #dfe5ec;
+
+    border-radius: 12px;
+
+    padding: 60px 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,0.05);
+
+}
+
+
+.sin-pedidos-icono {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #eaf3ff;
+
+    color: #0074F3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 35px;
+
+}
+
+
+.sin-pedidos h2 {
+
+    color: #042C6F;
+
+    margin-bottom: 10px;
+
+}
+
+
+.sin-pedidos p {
+
+    color: #666;
+
+    margin-bottom: 25px;
+
+}
+
+
+.btn-ver-productos {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #0074F3;
+
+    color: #FFFFFF;
+
+    padding: 12px 20px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+.btn-ver-productos:hover {
+
+    background: #042C6F;
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .pedido-informacion {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .pedidos-contenedor {
+
+        margin: 20px auto;
+
+        padding: 15px;
+
+    }
+
+
+    .pedidos-titulo h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .pedido-card {
+
+        padding: 18px;
+
+    }
+
+
+    .pedido-header {
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .pedido-informacion {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .pedido-acciones {
+
+        flex-direction: column;
+
+    }
+
+
+    .btn-ver-pedido,
+    .btn-seguir-comprando {
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+    }
+
+}

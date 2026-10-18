@@ -1,0 +1,162 @@
+/* =====================================================
+   ERROR PROCESAR PEDIDO
+===================================================== */
+
+.error-pedido {
+
+    max-width: 650px;
+
+    margin: 80px auto;
+
+    padding: 40px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #dfe5ec;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.error-icono {
+
+    margin-bottom: 20px;
+
+}
+
+
+.error-icono i {
+
+    font-size: 60px;
+
+    color: #c62828;
+
+}
+
+
+.error-pedido h1 {
+
+    color: #042C6F;
+
+    margin-bottom: 15px;
+
+}
+
+
+.error-pedido p {
+
+    color: #555;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+
+}
+
+
+.error-botones {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.btn-error {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 12px 20px;
+
+    background: #0074F3;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+
+}
+
+
+.btn-error:hover {
+
+    background: #042C6F;
+
+}
+
+
+.btn-inicio {
+
+    background: #111111;
+
+}
+
+
+.btn-inicio:hover {
+
+    background: #333333;
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .error-pedido {
+
+        margin: 40px 15px;
+
+        padding: 30px 20px;
+
+    }
+
+
+    .error-pedido h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .error-botones {
+
+        flex-direction: column;
+
+    }
+
+
+    .btn-error {
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+    }
+
+}

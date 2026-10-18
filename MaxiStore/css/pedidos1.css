@@ -1,0 +1,821 @@
+/* =====================================================
+MAXISTORE - ADMINISTRACIÓN DE PEDIDOS
+pedidos.css
+===================================================== */
+
+/* =====================================================
+PANEL PRINCIPAL
+===================================================== */
+
+.pedidos-panel {
+
+width: 100%;
+
+overflow: hidden;
+
+}
+
+/* =====================================================
+CABECERA PEDIDOS
+===================================================== */
+
+.pedidos-header {
+
+min-height: 85px;
+
+}
+
+.pedidos-total {
+
+display: flex;
+
+align-items: center;
+
+gap: 9px;
+
+padding: 9px 14px;
+
+border-radius: 10px;
+
+background: var(--azul-claro);
+
+color: var(--azul);
+
+font-size: 13px;
+
+font-weight: 700;
+
+white-space: nowrap;
+
+}
+
+.pedidos-total i {
+
+font-size: 18px;
+
+}
+
+/* =====================================================
+FILTROS
+===================================================== */
+
+.pedidos-filtros {
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+gap: 15px;
+
+padding: 20px 22px;
+
+background: var(--blanco);
+
+border-bottom: 1px solid var(--borde);
+
+}
+
+/* =====================================================
+BUSCADOR
+===================================================== */
+
+.pedidos-busqueda {
+
+display: flex;
+
+align-items: center;
+
+gap: 10px;
+
+flex: 1;
+
+min-width: 0;
+
+}
+
+.campo-busqueda {
+
+position: relative;
+
+flex: 1;
+
+min-width: 0;
+
+}
+
+.campo-busqueda i {
+
+position: absolute;
+
+left: 14px;
+
+top: 50%;
+
+transform: translateY(-50%);
+
+color: var(--gris);
+
+font-size: 16px;
+
+pointer-events: none;
+
+}
+
+.campo-busqueda input {
+
+width: 100%;
+
+height: 44px;
+
+padding: 0 15px 0 42px;
+
+border: 1px solid var(--borde);
+
+border-radius: 9px;
+
+background: var(--gris-claro);
+
+color: var(--negro);
+
+font-family: inherit;
+
+font-size: 13px;
+
+outline: none;
+
+transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+.campo-busqueda input::placeholder {
+
+color: #9ca3af;
+
+}
+
+.campo-busqueda input:focus {
+
+background: var(--blanco);
+
+border-color: var(--azul);
+
+box-shadow:
+    0 0 0 3px rgba(0, 102, 255, 0.10);
+
+}
+
+/* =====================================================
+BOTÓN BUSCAR
+===================================================== */
+
+.btn-buscar {
+
+height: 44px;
+
+padding: 0 18px;
+
+border: none;
+
+border-radius: 9px;
+
+background: var(--azul);
+
+color: var(--blanco);
+
+display: inline-flex;
+
+align-items: center;
+
+justify-content: center;
+
+gap: 7px;
+
+font-size: 13px;
+
+font-weight: 700;
+
+cursor: pointer;
+
+white-space: nowrap;
+
+transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.btn-buscar:hover {
+
+background: var(--azul-oscuro);
+
+transform: translateY(-1px);
+
+}
+
+.btn-buscar:active {
+
+transform: translateY(0);
+
+}
+
+/* =====================================================
+FILTRO ESTADO
+===================================================== */
+
+.pedidos-filtro-estado {
+
+flex-shrink: 0;
+
+}
+
+.pedidos-filtro-estado select {
+
+height: 44px;
+
+min-width: 180px;
+
+padding: 0 35px 0 13px;
+
+border: 1px solid var(--borde);
+
+border-radius: 9px;
+
+background: var(--blanco);
+
+color: var(--gris-oscuro);
+
+font-family: inherit;
+
+font-size: 13px;
+
+cursor: pointer;
+
+outline: none;
+
+}
+
+.pedidos-filtro-estado select:focus {
+
+border-color: var(--azul);
+
+box-shadow:
+    0 0 0 3px rgba(0, 102, 255, 0.10);
+
+}
+
+/* =====================================================
+INFORMACIÓN DE FILTROS
+===================================================== */
+
+.pedidos-filtro-info {
+
+display: flex;
+
+align-items: center;
+
+gap: 8px;
+
+padding: 12px 22px;
+
+background: var(--azul-claro);
+
+color: var(--gris-oscuro);
+
+font-size: 12px;
+
+}
+
+.pedidos-filtro-info > i {
+
+color: var(--azul);
+
+font-size: 15px;
+
+}
+
+.pedidos-filtro-info a {
+
+margin-left: auto;
+
+display: inline-flex;
+
+align-items: center;
+
+gap: 5px;
+
+color: var(--azul);
+
+font-weight: 700;
+
+}
+
+.pedidos-filtro-info a:hover {
+
+color: var(--azul-oscuro);
+
+}
+
+/* =====================================================
+TABLA
+===================================================== */
+
+.pedidos-tabla {
+
+overflow-x: auto;
+
+}
+
+.pedidos-tabla table {
+
+min-width: 850px;
+
+}
+
+/* =====================================================
+CABECERA TABLA
+===================================================== */
+
+.pedidos-tabla th {
+
+padding: 15px 20px;
+
+background: #fafafa;
+
+border-bottom: 1px solid var(--borde);
+
+}
+
+/* =====================================================
+FILAS
+===================================================== */
+
+.pedidos-tabla tbody tr {
+
+transition:
+    background 0.2s ease;
+
+}
+
+.pedidos-tabla tbody tr:hover {
+
+background: #f8fbff;
+
+}
+
+/* =====================================================
+CELDAS
+===================================================== */
+
+.pedidos-tabla td {
+
+vertical-align: middle;
+
+}
+
+/* =====================================================
+NÚMERO PEDIDO
+===================================================== */
+
+.pedido-numero {
+
+color: var(--azul);
+
+font-size: 14px;
+
+}
+
+/* =====================================================
+CLIENTE
+===================================================== */
+
+.cliente-pedido {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 4px;
+
+min-width: 180px;
+
+}
+
+.cliente-pedido strong {
+
+color: var(--negro);
+
+font-size: 13px;
+
+}
+
+.cliente-pedido span {
+
+color: var(--gris);
+
+font-size: 11px;
+
+overflow: hidden;
+
+text-overflow: ellipsis;
+
+white-space: nowrap;
+
+max-width: 220px;
+
+}
+
+/* =====================================================
+FECHA
+===================================================== */
+
+.pedido-fecha {
+
+display: inline-flex;
+
+align-items: center;
+
+gap: 7px;
+
+color: var(--gris-oscuro);
+
+font-size: 12px;
+
+}
+
+.pedido-fecha i {
+
+color: var(--azul);
+
+}
+
+/* =====================================================
+TOTAL
+===================================================== */
+
+.pedido-total {
+
+color: var(--negro);
+
+font-size: 14px;
+
+}
+
+/* =====================================================
+ESTADOS
+===================================================== */
+
+.estado {
+
+display: inline-flex;
+
+align-items: center;
+
+justify-content: center;
+
+padding: 6px 11px;
+
+border-radius: 20px;
+
+font-size: 11px;
+
+font-weight: 700;
+
+white-space: nowrap;
+
+}
+
+.estado-pendiente {
+
+color: var(--amarillo);
+
+background: #fffbeb;
+
+}
+
+.estado-completado {
+
+color: var(--verde);
+
+background: #ecfdf3;
+
+}
+
+.estado-cancelado {
+
+color: var(--rojo);
+
+background: #fef2f2;
+
+}
+
+/* =====================================================
+BOTÓN VER PEDIDO
+===================================================== */
+
+.pedido-ver {
+
+display: inline-flex;
+
+align-items: center;
+
+justify-content: center;
+
+gap: 6px;
+
+min-height: 35px;
+
+padding: 0 11px;
+
+border: 1px solid #dbe7f7;
+
+border-radius: 8px;
+
+background: var(--azul-claro);
+
+color: var(--azul);
+
+font-size: 12px;
+
+font-weight: 700;
+
+transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+
+}
+
+.pedido-ver i {
+
+font-size: 15px;
+
+}
+
+.pedido-ver:hover {
+
+background: var(--azul);
+
+border-color: var(--azul);
+
+color: var(--blanco);
+
+}
+
+/* =====================================================
+TABLA VACÍA
+===================================================== */
+
+.pedidos-sin-resultados {
+
+min-height: 280px;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+justify-content: center;
+
+gap: 9px;
+
+padding: 30px 15px;
+
+}
+
+.pedidos-sin-resultados > i {
+
+width: 65px;
+
+height: 65px;
+
+margin-bottom: 5px;
+
+border-radius: 50%;
+
+background: var(--azul-claro);
+
+color: var(--azul);
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+font-size: 29px;
+
+}
+
+.pedidos-sin-resultados strong {
+
+color: var(--negro);
+
+font-size: 15px;
+
+}
+
+.pedidos-sin-resultados span {
+
+color: var(--gris);
+
+font-size: 12px;
+
+text-align: center;
+
+max-width: 400px;
+
+}
+
+/* =====================================================
+BOTÓN LIMPIAR FILTROS
+===================================================== */
+
+.btn-limpiar-filtros {
+
+margin-top: 8px;
+
+display: inline-flex;
+
+align-items: center;
+
+justify-content: center;
+
+gap: 7px;
+
+padding: 9px 14px;
+
+border-radius: 8px;
+
+background: var(--azul);
+
+color: var(--blanco);
+
+font-size: 12px;
+
+font-weight: 700;
+
+transition:
+    background 0.2s ease;
+
+}
+
+.btn-limpiar-filtros:hover {
+
+background: var(--azul-oscuro);
+
+}
+
+/* =====================================================
+RESPONSIVE - TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+
+.pedidos-filtros {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+}
+
+
+.pedidos-busqueda {
+
+    width: 100%;
+
+}
+
+
+.pedidos-filtro-estado {
+
+    width: 100%;
+
+}
+
+
+.pedidos-filtro-estado select {
+
+    width: 100%;
+
+}
+
+}
+
+/* =====================================================
+RESPONSIVE - MÓVIL
+===================================================== */
+
+@media (max-width: 600px) {
+
+.pedidos-header {
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.pedidos-total {
+
+    align-self: flex-start;
+
+}
+
+
+.pedidos-filtros {
+
+    padding: 16px;
+
+}
+
+
+.pedidos-busqueda {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+}
+
+
+.campo-busqueda {
+
+    width: 100%;
+
+}
+
+
+.btn-buscar {
+
+    width: 100%;
+
+}
+
+
+.pedidos-filtro-info {
+
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+
+    padding: 12px 16px;
+
+}
+
+
+.pedidos-filtro-info a {
+
+    width: 100%;
+
+    margin-left: 23px;
+
+    margin-top: 3px;
+
+}
+
+
+.pedidos-tabla table {
+
+    min-width: 750px;
+
+}
+
+}
+
+/* =====================================================
+MÓVIL PEQUEÑO
+===================================================== */
+
+@media (max-width: 400px) {
+
+.pedidos-tabla table {
+
+    min-width: 700px;
+
+}
+
+
+.pedidos-total {
+
+    font-size: 12px;
+
+}
+
+
+.pedidos-sin-resultados {
+
+    min-height: 240px;
+
+}
+
+}

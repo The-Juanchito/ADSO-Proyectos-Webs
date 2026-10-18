@@ -1,0 +1,662 @@
+/* =====================================================
+   CHECKOUT
+===================================================== */
+
+.checkout {
+
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 20px;
+
+}
+
+
+/* =====================================================
+   VOLVER
+===================================================== */
+
+.volver-carrito {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+
+    color: #0074F3;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+
+}
+
+
+.volver-carrito:hover {
+
+    color: #042C6F;
+
+}
+
+
+
+/* =====================================================
+   TÍTULO
+===================================================== */
+
+.checkout-titulo {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.checkout-titulo > span {
+
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: #0074F3;
+
+}
+
+
+.checkout-titulo h1 {
+
+    margin: 0;
+
+    color: #042C6F;
+
+    font-size: 32px;
+
+}
+
+
+.checkout-titulo p {
+
+    margin-top: 10px;
+
+    color: #666;
+
+}
+
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.checkout-contenedor {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 30px;
+
+    align-items: start;
+
+}
+
+
+
+/* =====================================================
+   FORMULARIO
+===================================================== */
+
+.formulario {
+
+    background: #FFFFFF;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    border: 1px solid #dfe5ec;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+
+.formulario h2 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #042C6F;
+
+    margin: 0 0 10px;
+
+}
+
+
+.formulario-descripcion {
+
+    margin-bottom: 25px;
+
+    color: #666;
+
+}
+
+
+
+/* =====================================================
+   CAMPOS
+===================================================== */
+
+.campo {
+
+    margin-bottom: 20px;
+
+}
+
+
+.campo label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #042C6F;
+
+}
+
+
+.campo label i {
+
+    color: #0074F3;
+
+    margin-right: 5px;
+
+}
+
+
+.campo input,
+.campo textarea,
+.campo select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #dfe5ec;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    font-family: inherit;
+
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+
+    color: #111;
+
+    transition: 0.2s;
+
+}
+
+
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus {
+
+    border-color: #0074F3;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 116, 243, 0.10);
+
+}
+
+
+.campo textarea {
+
+    resize: vertical;
+
+    min-height: 100px;
+
+}
+
+
+
+/* =====================================================
+   BOTÓN FINALIZAR
+===================================================== */
+
+.btn-finalizar {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 15px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #0074F3;
+
+    color: #FFFFFF;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.btn-finalizar:hover {
+
+    background: #042C6F;
+
+    transform: translateY(-1px);
+
+}
+
+
+.btn-finalizar:active {
+
+    transform: translateY(0);
+
+}
+
+
+
+/* =====================================================
+   PAGO SEGURO
+===================================================== */
+
+.pago-seguro {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 15px;
+
+    color: #666;
+
+    font-size: 13px;
+
+    text-align: center;
+
+}
+
+
+.pago-seguro i {
+
+    color: #0074F3;
+
+    font-size: 16px;
+
+}
+
+
+
+/* =====================================================
+   RESUMEN
+===================================================== */
+
+.resumen-checkout {
+
+    background: #FFFFFF;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    border: 1px solid #dfe5ec;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.05);
+
+    position: sticky;
+
+    top: 20px;
+
+}
+
+
+.resumen-checkout h2 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #042C6F;
+
+    margin: 0 0 20px;
+
+}
+
+
+
+/* =====================================================
+   PRODUCTOS RESUMEN
+===================================================== */
+
+.productos-resumen {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.producto-resumen {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #dfe5ec;
+
+}
+
+
+.producto-resumen-imagen {
+
+    width: 65px;
+
+    min-width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f8fafc;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+
+.producto-resumen-imagen img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+
+.producto-resumen-imagen i {
+
+    font-size: 25px;
+
+    color: #aaa;
+
+}
+
+
+.producto-resumen-info {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.producto-resumen-info h3 {
+
+    margin: 0 0 5px;
+
+    color: #042C6F;
+
+    font-size: 14px;
+
+}
+
+
+.producto-resumen-info p {
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 13px;
+
+}
+
+
+.producto-precio {
+
+    white-space: nowrap;
+
+    font-weight: bold;
+
+    color: #0074F3;
+
+    font-size: 14px;
+
+}
+
+
+
+/* =====================================================
+   TOTAL
+===================================================== */
+
+.total-checkout {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #dfe5ec;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #042C6F;
+
+}
+
+
+.total-checkout strong {
+
+    color: #0074F3;
+
+}
+
+
+
+/* =====================================================
+   SEGURIDAD
+===================================================== */
+
+.seguridad-checkout {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    background: #f8fafc;
+
+    border-radius: 8px;
+
+}
+
+
+.seguridad-checkout > i {
+
+    font-size: 24px;
+
+    color: #0074F3;
+
+}
+
+
+.seguridad-checkout strong {
+
+    display: block;
+
+    color: #042C6F;
+
+    font-size: 14px;
+
+}
+
+
+.seguridad-checkout p {
+
+    margin: 3px 0 0;
+
+    color: #666;
+
+    font-size: 12px;
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .checkout-contenedor {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .resumen-checkout {
+
+        position: static;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .checkout {
+
+        margin: 20px auto;
+
+        padding: 15px;
+
+    }
+
+
+    .formulario {
+
+        padding: 20px;
+
+    }
+
+
+    .resumen-checkout {
+
+        padding: 20px;
+
+    }
+
+
+    .checkout-titulo h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .producto-resumen {
+
+        gap: 8px;
+
+    }
+
+
+    .producto-resumen-imagen {
+
+        width: 55px;
+
+        min-width: 55px;
+
+        height: 55px;
+
+    }
+
+
+    .producto-precio {
+
+        font-size: 13px;
+
+    }
+
+}

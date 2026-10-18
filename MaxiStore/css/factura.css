@@ -1,0 +1,545 @@
+/* =====================================================
+   MAXISTORE - FACTURA
+   Colores: Azul + Blanco + Negro
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #111827;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    width: 100%;
+    min-height: 75px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 6%;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.logo img {
+    width: 145px;
+    height: auto;
+    display: block;
+}
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.acciones a {
+    text-decoration: none;
+    color: #111827;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.acciones a:hover {
+    background: #0074f3;
+    color: #ffffff;
+}
+
+.acciones i {
+    margin-right: 5px;
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.factura {
+    width: 100%;
+    padding: 45px 20px;
+}
+
+.factura-documento {
+    max-width: 950px;
+    margin: auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================================
+   ENCABEZADO FACTURA
+===================================================== */
+
+.factura-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    border-bottom: 3px solid #0074f3;
+}
+
+.factura-logo img {
+    width: 180px;
+    max-width: 100%;
+}
+
+.factura-titulo {
+    text-align: right;
+}
+
+.factura-titulo h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #0074f3;
+    letter-spacing: 1px;
+}
+
+.factura-titulo h1 i {
+    margin-right: 7px;
+}
+
+.factura-titulo p {
+    margin: 7px 0 0;
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   INFORMACIÓN DEL PEDIDO
+===================================================== */
+
+.info-pedido {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.info-pedido-box {
+    background: #f4f8ff;
+    border: 1px solid #dce9fa;
+    border-radius: 10px;
+    padding: 17px;
+}
+
+.info-pedido-box span {
+    display: block;
+    color: #6b7280;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.info-pedido-box strong {
+    color: #111827;
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   DATOS CLIENTE / ENTREGA
+===================================================== */
+
+.datos-factura {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.datos-bloque {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 22px;
+    background: #ffffff;
+}
+
+.datos-bloque h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 19px;
+    color: #0074f3;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 12px;
+}
+
+.datos-bloque h2 i {
+    margin-right: 7px;
+}
+
+.datos-bloque p {
+    margin: 10px 0;
+    line-height: 1.5;
+    color: #374151;
+}
+
+.datos-bloque strong {
+    color: #111827;
+}
+
+
+/* =====================================================
+   TÍTULOS
+===================================================== */
+
+.factura-documento > h2 {
+    margin-top: 35px;
+    margin-bottom: 18px;
+    font-size: 21px;
+    color: #111827;
+}
+
+.factura-documento > h2 i {
+    color: #0074f3;
+    margin-right: 7px;
+}
+
+
+/* =====================================================
+   TABLA
+===================================================== */
+
+.tabla-factura {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.tabla-factura thead {
+    background: #0074f3;
+    color: #ffffff;
+}
+
+.tabla-factura th {
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.tabla-factura td {
+    padding: 15px;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: middle;
+}
+
+.tabla-factura tbody tr:hover {
+    background: #f8fbff;
+}
+
+.tabla-factura tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-factura img {
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    padding: 4px;
+}
+
+.texto-centro {
+    text-align: center !important;
+}
+
+.texto-derecha {
+    text-align: right !important;
+}
+
+
+/* =====================================================
+   TOTAL
+===================================================== */
+
+.factura-total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.total-box {
+    width: 350px;
+    max-width: 100%;
+}
+
+.total-final {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0074f3;
+    color: #ffffff;
+    padding: 20px 25px;
+    border-radius: 12px;
+}
+
+.total-final span {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.total-final strong {
+    font-size: 25px;
+}
+
+
+/* =====================================================
+   ESTADO DEL PAGO
+===================================================== */
+
+.estado-pago {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    color: #166534;
+    line-height: 2;
+}
+
+.estado-pago span {
+    margin-right: 5px;
+}
+
+.estado-pago strong {
+    color: #15803d;
+    margin-right: 25px;
+}
+
+.estado-pago i {
+    margin-right: 5px;
+}
+
+
+/* =====================================================
+   MENSAJE FINAL
+===================================================== */
+
+.mensaje-factura {
+    text-align: center;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 12px;
+    background: #f4f8ff;
+    border: 1px solid #dce9fa;
+}
+
+.mensaje-factura h3 {
+    margin-top: 0;
+    color: #0074f3;
+    font-size: 21px;
+}
+
+.mensaje-factura h3 i {
+    margin-right: 6px;
+}
+
+.mensaje-factura p {
+    margin: 7px 0;
+    color: #4b5563;
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.factura-acciones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-imprimir,
+.btn-tienda {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 22px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.btn-imprimir {
+    border: none;
+    background: #0074f3;
+    color: #ffffff;
+}
+
+.btn-imprimir:hover {
+    background: #005ec4;
+    transform: translateY(-1px);
+}
+
+.btn-tienda {
+    background: #111827;
+    color: #ffffff;
+}
+
+.btn-tienda:hover {
+    background: #000000;
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #111827;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 20px;
+}
+
+footer h2 {
+    margin: 0 0 8px;
+    color: #ffffff;
+}
+
+footer p {
+    margin: 7px 0;
+    color: #d1d5db;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 12px 20px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .acciones a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .factura {
+        padding: 20px 10px;
+    }
+
+    .factura-documento {
+        padding: 22px 15px;
+        border-radius: 10px;
+    }
+
+    .factura-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .factura-titulo {
+        text-align: center;
+    }
+
+    .factura-titulo h1 {
+        font-size: 26px;
+    }
+
+    .info-pedido {
+        grid-template-columns: 1fr;
+    }
+
+    .datos-factura {
+        grid-template-columns: 1fr;
+    }
+
+    .tabla-factura {
+        font-size: 13px;
+    }
+
+    .tabla-factura th,
+    .tabla-factura td {
+        padding: 9px 6px;
+    }
+
+    .tabla-factura td:first-child div {
+        gap: 7px !important;
+    }
+
+    .tabla-factura img {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    .total-final {
+        padding: 17px;
+    }
+
+    .total-final strong {
+        font-size: 21px;
+    }
+
+}
+
+
+/* =====================================================
+   IMPRESIÓN
+===================================================== */
+
+@media print {
+
+    body {
+        background: #ffffff;
+    }
+
+    .header,
+    footer,
+    .factura-acciones {
+        display: none !important;
+    }
+
+    .factura {
+        padding: 0;
+    }
+
+    .factura-documento {
+        max-width: 100%;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .tabla-factura thead {
+        background: #0074f3 !important;
+        color: #ffffff !important;
+    }
+
+    .mensaje-factura {
+        border: 1px solid #ddd;
+    }
+}

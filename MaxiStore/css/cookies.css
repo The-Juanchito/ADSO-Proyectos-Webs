@@ -1,0 +1,204 @@
+
+/* =====================================================
+   CONTENEDOR DE COOKIES
+===================================================== */
+
+.cookie-overlay {
+
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+
+}
+
+
+/* =====================================================
+   TARJETA
+===================================================== */
+
+.cookie-card {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.18);
+
+    border: 1px solid #e5e7eb;
+
+}
+
+
+/* =====================================================
+   TITULO
+===================================================== */
+
+.cookie-card .title {
+
+    display: block;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #111827;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =====================================================
+   DESCRIPCIÓN
+===================================================== */
+
+.cookie-card .description {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #4b5563;
+
+}
+
+
+.cookie-card .description a {
+
+    color: #0074f3;
+
+    text-decoration: none;
+
+}
+
+
+.cookie-card .description a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.cookie-card .actions {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 18px;
+
+}
+
+
+/* AHORA NO */
+
+.cookie-card .pref {
+
+    border: none;
+
+    background: transparent;
+
+    color: #374151;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    text-decoration: underline;
+
+}
+
+
+.cookie-card .pref:hover {
+
+    color: #0074f3;
+
+}
+
+
+/* ACEPTAR */
+
+.cookie-card .accept {
+
+    border: none;
+
+    background: #0074f3;
+
+    color: #ffffff;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.cookie-card .accept:hover {
+
+    background: #005ecb;
+
+}
+
+
+/* =====================================================
+   MÓVIL
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .cookie-card .actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    .cookie-card .pref {
+
+        order: 2;
+
+    }
+
+    .cookie-card .accept {
+
+        width: 100%;
+
+    }
+
+}

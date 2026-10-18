@@ -1,0 +1,416 @@
+
+/* =====================================================
+   PERFIL
+===================================================== */
+
+.perfil-contenedor {
+
+    max-width: 1200px;
+
+    margin: 40px auto;
+
+    padding: 0 20px;
+
+}
+
+
+/* =====================================================
+   BIENVENIDA
+===================================================== */
+
+.perfil-bienvenida {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+
+    margin-bottom: 25px;
+
+}
+
+
+.saludo {
+
+    color: #0074f3;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+}
+
+
+.perfil-bienvenida h1 {
+
+    margin: 8px 0;
+
+    color: #111827;
+
+}
+
+
+.perfil-bienvenida p {
+
+    margin: 0;
+
+    color: #6b7280;
+
+}
+
+
+.perfil-avatar {
+
+    width: 90px;
+
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: #0074f3;
+
+    color: #ffffff;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 42px;
+
+}
+
+
+/* =====================================================
+   ESTADÍSTICAS
+===================================================== */
+
+.perfil-estadisticas {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.estadistica {
+
+    background: #ffffff;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+
+}
+
+
+.estadistica > i {
+
+    font-size: 30px;
+
+    color: #0074f3;
+
+}
+
+
+.estadistica strong {
+
+    display: block;
+
+    font-size: 22px;
+
+    color: #111827;
+
+}
+
+
+.estadistica span {
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.perfil-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.perfil-card {
+
+    background: #ffffff;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+
+}
+
+
+.card-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 10px;
+
+    background: #e8f2ff;
+
+    color: #0074f3;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 23px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.perfil-card h2 {
+
+    margin: 0 0 15px;
+
+    color: #111827;
+
+}
+
+
+.card-texto {
+
+    color: #6b7280;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   DATOS
+===================================================== */
+
+.dato {
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+}
+
+
+.dato span {
+
+    display: block;
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.dato strong {
+
+    color: #111827;
+
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.btn-card {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+    padding: 11px 18px;
+
+    background: #0074f3;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: .2s;
+
+}
+
+
+.btn-card:hover {
+
+    background: #005ecb;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =====================================================
+   CERRAR SESIÓN
+===================================================== */
+
+.cerrar-cuenta {
+
+    text-align: center;
+
+    margin: 30px 0;
+
+}
+
+
+.btn-cerrar {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #dc2626;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+
+.btn-cerrar:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =====================================================
+   CONTADOR CARRITO
+===================================================== */
+
+.contador-carrito {
+
+    background: #0074f3;
+
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    min-width: 20px;
+
+    height: 20px;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 11px;
+
+    margin-left: 4px;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .perfil-estadisticas {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .perfil-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .perfil-bienvenida {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+    }
+
+}
+
+/* =====================================================
+   LOGO DEL HEADER - PERFIL
+===================================================== */
+
+.header .logo img {
+    width: 100px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
