@@ -1,0 +1,77 @@
+@use 'variables' as *;
+
+.catalog-page {
+  padding-top: 40px;
+
+  .catalog-head {
+    @include container;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .filters {
+    @include container;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 28px;
+
+    button {
+      @include btn(transparent, $text);
+      border: 1px solid $border;
+      padding: 9px 20px;
+      font-size: 13px;
+
+      &:hover,
+      &.on {
+        background: $primary;
+        border-color: $primary;
+        color: $white;
+      }
+    }
+
+    .search {
+      flex-basis: 100%;
+      text-align: center;
+
+      input {
+        max-width: 420px;
+        width: 100%;
+        padding: 12px 20px;
+        border: 1px solid $border;
+        border-radius: 999px;
+        font: 400 14px $font-body;
+        background: $white;
+        outline: none;
+
+        &:focus {
+          border-color: $primary;
+        }
+      }
+    }
+  }
+
+  .grid {
+    @include container;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include for-phone {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+  }
+
+  .empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 48px 0;
+    color: $text;
+  }
+}

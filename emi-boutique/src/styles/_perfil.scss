@@ -1,0 +1,877 @@
+@use 'variables' as *;
+
+.perfil-page {
+  @include container;
+  padding-block: 36px 70px;
+
+  .perfil-hero {
+    text-align: center;
+    margin-bottom: 32px;
+
+    h1 {
+      font-size: clamp(28px, 4vw, 38px);
+      margin-bottom: 6px;
+    }
+
+    p {
+      color: $text;
+    }
+  }
+
+  .perfil-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 24px;
+    align-items: start;
+
+    @include for-tablet {
+      grid-template-columns: 260px 1fr;
+    }
+
+    @include for-phone {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // ------- Barra lateral -------
+  .perfil-side {
+    background: $white;
+    border-radius: 18px;
+    box-shadow: $shadow;
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    position: sticky;
+    top: 90px;
+
+    @include for-phone {
+      position: static;
+    }
+
+    .foto-grande {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: $primary-light;
+      color: $primary;
+      font: 600 44px $font-display;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      border: 4px solid $white;
+      box-shadow: 0 0 0 2px $border;
+      text-transform: uppercase;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .cuenta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      text-align: center;
+
+      strong {
+        font-size: 16px;
+        color: $dark;
+      }
+
+      span {
+        font-size: 13px;
+        color: $text;
+      }
+
+      .rol {
+        margin-top: 6px;
+        background: $light;
+        border: 1px solid $border;
+        color: $text;
+        padding: 4px 14px;
+        border-radius: 999px;
+        font-size: 12px;
+
+        &.admin {
+          background: rgba(201, 162, 75, 0.14);
+          border-color: rgba(201, 162, 75, 0.4);
+          color: #a3812f;
+        }
+      }
+    }
+
+    .perfil-menu {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 6px;
+
+      .perfil-menu-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        padding: 11px 14px;
+        border: 0;
+        border-radius: 12px;
+        background: transparent;
+        color: $dark;
+        font: 500 13.5px $font-body;
+        cursor: pointer;
+        text-align: left;
+        transition: 0.18s;
+
+        i {
+          font-size: 16px;
+          color: $text;
+        }
+
+        &:hover {
+          background: $light;
+        }
+
+        &.activo {
+          background: rgba(194, 87, 125, 0.12);
+          color: $primary-dark;
+
+          i {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  // ------- Contenido -------
+  .perfil-main {
+    min-width: 0;
+
+    .mis-pedidos {
+      margin-top: 0;
+    }
+  }
+
+  .perfil-card {
+    background: $white;
+    border-radius: 18px;
+    box-shadow: $shadow;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    &.guard {
+      max-width: 460px;
+      text-align: center;
+      justify-content: center;
+      margin-inline: auto;
+
+      p {
+        margin-bottom: 14px;
+      }
+    }
+
+    .perfil-foto-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid $border;
+      margin-bottom: 4px;
+
+      .foto-mini {
+        width: 66px;
+        height: 66px;
+        border-radius: 50%;
+        background: $primary-light;
+        color: $primary;
+        font: 600 24px $font-display;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        flex: 0 0 auto;
+        text-transform: uppercase;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .perfil-foto-txt {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .btn-upload {
+          align-self: flex-start;
+          @include btn(transparent, $primary);
+          border: 1px solid rgba(194, 87, 125, 0.4);
+          font-size: 13px;
+          padding: 9px 18px;
+          cursor: pointer;
+        }
+
+        small {
+          color: $text;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      label {
+        font-size: 12.5px;
+        font-weight: 500;
+        color: $dark;
+
+        .opt {
+          color: $text;
+          font-weight: 400;
+        }
+      }
+
+      input {
+        padding: 12px 14px;
+        border: 1px solid $border;
+        border-radius: 12px;
+        font: 400 14px $font-body;
+        outline: none;
+        transition: 0.2s;
+
+        &:focus {
+          border-color: $primary;
+          box-shadow: 0 0 0 3px rgba(194, 87, 125, 0.12);
+        }
+      }
+    }
+
+    .msg-error {
+      color: #c0392b;
+      font-size: 13px;
+    }
+
+    .msg-ok {
+      color: $primary-dark;
+      font-size: 13px;
+    }
+
+    .btn-save {
+      @include btn($primary, $white);
+      width: 100%;
+      margin-top: 4px;
+    }
+
+    .btn-logout {
+      @include btn(transparent, #c0392b);
+      width: 100%;
+      margin-top: 10px;
+      border: 1px solid rgba(192, 57, 43, 0.45);
+      background: transparent;
+      color: #c0392b;
+
+      &:hover {
+        background: rgba(192, 57, 43, 0.08);
+        border-color: #c0392b;
+      }
+    }
+  }
+
+  // ------- Paneles genéricos -------
+  .pf-empty {
+    background: $white;
+    border-radius: 18px;
+    box-shadow: $shadow;
+    padding: 34px 24px;
+    text-align: center;
+    color: $text;
+    font-size: 14px;
+
+    a {
+      color: $primary;
+      font-weight: 600;
+    }
+  }
+
+  .pf-bloque {
+    background: $white;
+    border-radius: 18px;
+    box-shadow: $shadow;
+    padding: 24px;
+    margin-bottom: 22px;
+
+    h3 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 18px;
+      margin-bottom: 16px;
+
+      i {
+        color: $primary;
+      }
+    }
+
+    .pf-empty {
+      box-shadow: none;
+      padding: 18px 6px;
+    }
+  }
+
+  // Sugerencias: calificados
+  .pf-calificados {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+  }
+
+  .pf-calif {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border: 1px solid $border;
+    border-radius: 14px;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+    background: $white;
+
+    &:hover {
+      border-color: $primary;
+      box-shadow: 0 6px 18px rgba(194, 87, 125, 0.1);
+    }
+
+    img {
+      width: 52px;
+      height: 62px;
+      object-fit: cover;
+      border-radius: 10px;
+      flex: 0 0 auto;
+    }
+
+    .pf-calif-info {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      min-width: 0;
+
+      strong {
+        font-size: 13.5px;
+        color: $dark;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .pf-stars {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        color: #e0a400;
+        font-size: 12px;
+
+        small {
+          color: $text;
+          margin-left: 4px;
+        }
+      }
+
+      .pf-precio {
+        font-size: 13px;
+        font-weight: 600;
+        color: $primary;
+      }
+    }
+  }
+
+  // Historia
+  .pf-hist-nota {
+    color: $text;
+    font-size: 13.5px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    i {
+      color: $primary;
+    }
+  }
+
+  .pf-vista {
+    position: relative;
+
+    .pf-vista-fecha {
+      display: inline-block;
+      margin: 8px 2px 0;
+      font-size: 11.5px;
+      color: $text;
+      background: $light;
+      border: 1px solid $border;
+      border-radius: 999px;
+      padding: 3px 10px;
+    }
+  }
+
+  // ------- Chat (cliente) -------
+  .pf-chat {
+    background: $white;
+    border-radius: 18px;
+    box-shadow: $shadow;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    .pf-chat-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 20px;
+      border-bottom: 1px solid $border;
+      background: linear-gradient(120deg, rgba(194, 87, 125, 0.08), transparent);
+
+      .pf-chat-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: $primary;
+        color: $white;
+        font-size: 18px;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+
+        strong {
+          color: $dark;
+          font-size: 14px;
+        }
+
+        small {
+          color: $text;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .pf-chat-box {
+      height: 380px;
+      overflow-y: auto;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: $light;
+    }
+
+    .pf-chat-vacio {
+      margin: auto;
+      text-align: center;
+      color: $text;
+      font-size: 13.5px;
+      max-width: 320px;
+
+      i {
+        font-size: 34px;
+        color: $primary;
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+
+    .pf-chat-form {
+      display: flex;
+      gap: 10px;
+      padding: 14px 16px;
+      border-top: 1px solid $border;
+
+      input {
+        flex: 1;
+        padding: 12px 14px;
+        border: 1px solid $border;
+        border-radius: 12px;
+        font: 400 14px $font-body;
+        outline: none;
+
+        &:focus {
+          border-color: $primary;
+          box-shadow: 0 0 0 3px rgba(194, 87, 125, 0.12);
+        }
+      }
+
+      button {
+        @include btn($primary, $white);
+        padding-inline: 20px;
+        white-space: nowrap;
+
+        &:disabled {
+          opacity: 0.6;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+}
+
+// Burbujas (compartidas entre el chat del cliente y el del administrador)
+.pf-burbuja {
+    max-width: 78%;
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-size: 13.5px;
+    line-height: 1.45;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    position: relative;
+
+    .pf-burbuja-txt {
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .pf-burbuja-fecha {
+      display: block;
+      font-size: 10.5px;
+      opacity: 0.7;
+      margin-top: 4px;
+    }
+
+    &.de-admin {
+      align-self: flex-start;
+      background: $white;
+      color: $dark;
+      border-bottom-left-radius: 4px;
+    }
+
+    &.mio {
+      align-self: flex-end;
+      background: $primary;
+      color: $white;
+      border-bottom-right-radius: 4px;
+    }
+  }
+
+// ------- Lista de productos compacta (sugerencias / vistos) -------
+.p-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.p-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 14px;
+  padding: 10px 14px;
+  transition: 0.18s;
+
+  &:hover {
+    border-color: $primary;
+    box-shadow: 0 6px 18px rgba(194, 87, 125, 0.1);
+  }
+
+  .p-row-thumb {
+    flex: 0 0 auto;
+    width: 54px;
+    height: 66px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: $light;
+    display: block;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .p-row-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    .p-row-cat {
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: $primary;
+    }
+
+    .p-row-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: $dark;
+      text-decoration: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    .p-row-nota {
+      font-size: 11.5px;
+      color: $text;
+    }
+  }
+
+  .p-row-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1px;
+    flex: 0 0 auto;
+
+    .antes {
+      font-size: 11.5px;
+      color: $text;
+      text-decoration: line-through;
+    }
+
+    b {
+      font-size: 14.5px;
+      color: $primary;
+    }
+  }
+
+  .p-row-action {
+    flex: 0 0 auto;
+
+    .btn-add {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: $primary;
+      color: $white;
+      font-size: 17px;
+      cursor: pointer;
+      transition: 0.25s;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow;
+      }
+    }
+
+    .qty-stepper {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      button {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid $border;
+        background: $white;
+        color: $dark;
+        font-size: 15px;
+        cursor: pointer;
+
+        &:hover {
+          border-color: $primary;
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  @include for-phone {
+    .p-row-nota {
+      display: none;
+    }
+  }
+}
+
+// ------- Direcciones de envío -------
+.perfil-card.dirs-card {
+  margin-top: 18px;
+  gap: 10px;
+}
+
+.dirs-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 17px;
+    color: $dark;
+
+    i {
+      color: $primary;
+    }
+  }
+}
+
+.btn-save.btn-mini {
+  width: auto;
+  margin-top: 0;
+  padding: 9px 16px;
+  font-size: 13px;
+}
+
+.dirs-nota {
+  font-size: 12.5px;
+  color: $text;
+  margin-bottom: 4px;
+}
+
+.dirs-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.dirs-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid $border;
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: $white;
+  flex-wrap: wrap;
+
+  &.principal {
+    border-color: rgba(194, 87, 125, 0.45);
+    background: rgba(194, 87, 125, 0.05);
+  }
+}
+
+.dirs-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.dirs-alias {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: $dark;
+}
+
+.dirs-badge {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #a3812f;
+  background: rgba(201, 162, 75, 0.16);
+  border: 1px solid rgba(201, 162, 75, 0.4);
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+
+.dirs-texto {
+  font-size: 12.5px;
+  color: $text;
+  line-height: 1.4;
+}
+
+.dirs-acciones {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.btn-ghost-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid $border;
+  background: $white;
+  color: $dark;
+  border-radius: 10px;
+  padding: 7px 11px;
+  font: 500 12.5px $font-body;
+  cursor: pointer;
+  transition: 0.18s;
+
+  i {
+    font-size: 13px;
+  }
+
+  &:hover {
+    border-color: $primary;
+    color: $primary;
+  }
+
+  &.peligro:hover {
+    border-color: #c0392b;
+    color: #c0392b;
+  }
+}
+
+.dirs-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid $border;
+  margin-top: 6px;
+  padding-top: 16px;
+}
+
+.dirs-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: $dark;
+
+  input {
+    width: 16px;
+    height: 16px;
+    accent-color: $primary;
+  }
+}
+
+.dirs-form-acciones {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .btn-save {
+    width: auto;
+    margin-top: 0;
+  }
+}

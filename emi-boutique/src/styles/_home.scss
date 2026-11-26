@@ -1,0 +1,197 @@
+@use 'variables' as *;
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, $primary-light 0%, $light 55%, $white 100%);
+
+  .hero-inner {
+    @include container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 32px;
+    padding-block: 72px;
+  }
+
+  .hero-copy {
+    h1 {
+      font-size: clamp(34px, 5vw, 58px);
+      margin-bottom: 16px;
+
+      span {
+        color: $primary;
+        font-style: italic;
+      }
+    }
+
+    p {
+      max-width: 460px;
+      margin-bottom: 28px;
+      font-size: 16px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .hero-img {
+    border-radius: 24px;
+    box-shadow: $shadow;
+
+    img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+  }
+
+  .logo-img {
+    display: grid;
+    place-items: center;
+
+    img {
+      width: min(420px, 100%);
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: $shadow;
+      border: 6px solid $primary;
+    }
+
+    @include for-phone {
+      display: none;
+    }
+  }
+
+  .hero-badge {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: $white;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font: 500 13px $font-body;
+    color: $primary;
+    box-shadow: $shadow;
+  }
+
+  @include for-phone {
+    .hero-inner {
+      grid-template-columns: 1fr;
+      padding-block: 40px;
+      text-align: center;
+    }
+
+    .hero-copy p {
+      margin-inline: auto;
+    }
+
+    .hero-cta {
+      justify-content: center;
+    }
+
+    .hero-img { display: none; }
+  }
+}
+
+// ---------- Scrollable product row ----------
+.products-section {
+  margin-top: 56px;
+
+  .section-head {
+    @include container;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: clamp(24px, 3vw, 32px);
+    }
+
+    a {
+      color: $primary;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      white-space: nowrap;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.scroll-row {
+  @include container;
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: $primary-light transparent;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primary-light;
+    border-radius: 8px;
+  }
+
+  .product-card {
+    flex: 0 0 260px;
+    scroll-snap-align: start;
+  }
+}
+
+// ---------- Category chips on home ----------
+.categories-row {
+  @include container;
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-block: 8px 20px;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  a {
+    @include btn(transparent, $text);
+    border: 1px solid $border;
+    white-space: nowrap;
+    padding: 10px 20px;
+
+    &:hover {
+      border-color: $primary;
+      color: $primary;
+    }
+  }
+}
+
+// ---------- Filas con arrastre (scroll lateral) ----------
+.scroll-row,
+.categories-row {
+  cursor: grab;
+
+  &.arrastrando {
+    cursor: grabbing;
+    scroll-snap-type: none;
+    user-select: none;
+
+    * {
+      pointer-events: none;
+    }
+  }
+}

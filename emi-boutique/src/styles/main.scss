@@ -1,0 +1,16 @@
+@use 'variables';
+@use 'base';
+@use 'home';
+@use 'card';
+@use 'catalog';
+@use 'producto';
+@use 'login';
+@use 'cart';
+@use 'pages';
+@use 'perfil';
+@use 'admin';
+@use 'chatbot';
+@use 'notificaciones';
+@use 'responsive';
+@use 'theme';
+@forward '../../node_modules/bootstrap/scss/bootstrap.scss';

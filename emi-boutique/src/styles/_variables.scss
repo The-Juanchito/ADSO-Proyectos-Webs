@@ -1,0 +1,54 @@
+$primary: #c2577d;
+$primary-dark: #a8446a;
+$primary-light: #f7dce5;
+$gold: #c9a24b;
+$dark: #2d1f27;
+$text: #5f5361;
+$light: #faf6f7;
+$white: #fff;
+$border: #eedfe5;
+
+$font-display: 'Playfair Display', serif;
+$font-body: 'Poppins', system-ui, sans-serif;
+
+$shadow: 0 10px 30px rgba(45, 31, 39, 0.08);
+
+@mixin for-tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin for-phone {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+@mixin btn($bg, $color) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 999px;
+  font: 500 14px $font-body;
+  letter-spacing: 0.5px;
+  color: $color;
+  background: $bg;
+  cursor: pointer;
+  transition: 0.25s;
+  text-decoration: none;
+
+  &:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+  }
+}

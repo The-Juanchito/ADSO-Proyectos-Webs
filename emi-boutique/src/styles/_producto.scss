@@ -1,0 +1,531 @@
+@use 'variables' as *;
+
+.producto-page {
+  @include container;
+  padding-block: 36px 70px;
+}
+
+.detalle {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 44px;
+  margin-bottom: 56px;
+
+  @include for-phone {
+    grid-template-columns: 1fr;
+  }
+
+  .foto {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: $shadow;
+    background: $light;
+
+    img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      display: block;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      padding: 10px;
+      background: $white;
+      border-top: 1px solid $border;
+
+      button {
+        border: 2px solid transparent;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 0;
+        cursor: pointer;
+        background: $light;
+        transition: 0.15s;
+
+        img {
+          aspect-ratio: 1 / 1;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        &:hover {
+          border-color: $primary-light;
+        }
+
+        &.activa {
+          border-color: $primary;
+          box-shadow: 0 0 0 2px rgba(194, 87, 125, 0.2);
+        }
+      }
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+
+    .badge-nuevo {
+      margin-bottom: -6px;
+    }
+
+    h1 {
+      font-family: $font-display;
+      font-size: clamp(26px, 4vw, 38px);
+      color: $dark;
+    }
+
+    .price {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: 26px;
+      font-weight: 600;
+      color: $primary;
+
+      &.oferta .antes {
+        font-size: 16px;
+        font-weight: 400;
+        color: $text;
+        text-decoration: line-through;
+      }
+
+      .badge-oferta {
+        background: $primary;
+        color: $white;
+        font: 700 13px $font-body;
+        padding: 4px 10px;
+        border-radius: 999px;
+      }
+    }
+
+    .desc {
+      color: $text;
+      line-height: 1.7;
+    }
+
+    .meta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 12.5px;
+      color: $text;
+      background: $light;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid $border;
+
+      .stock-ok {
+        color: #2e7d32;
+        font-weight: 500;
+      }
+
+      .stock-no {
+        color: #c0392b;
+        font-weight: 500;
+      }
+    }
+
+.colores {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+
+        .colores-label {
+          font-size: 13px;
+          color: $text;
+        }
+
+        .circulo {
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          border: 1px solid $border;
+          box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.55);
+          cursor: pointer;
+          padding: 0;
+          transition: transform 0.2s, box-shadow 0.2s;
+
+          &:hover {
+            transform: scale(1.12);
+          }
+
+          &.on {
+            transform: scale(1.12);
+            box-shadow: 0 0 0 2px $white, 0 0 0 4px $primary;
+          }
+        }
+
+        .colores-nombres {
+          font-size: 12.5px;
+          color: $text;
+          margin-left: 4px;
+        }
+      }
+
+      .opciones {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .tallas {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+
+        .talla {
+          border: 1px solid $primary;
+          color: $primary;
+          background: rgba(194, 87, 125, 0.06);
+          font-weight: 600;
+          font-size: 13px;
+          padding: 6px 14px;
+          border-radius: 999px;
+          cursor: pointer;
+          transition: 0.2s;
+          line-height: 1;
+
+          &:hover {
+            background: $primary-light;
+          }
+
+          &.on {
+            background: $primary;
+            color: $white;
+            border-color: $primary;
+          }
+        }
+      }
+
+    .btn-add {
+      @include btn($primary, $white);
+    }
+
+    .card-actions {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+
+      .btn-add {
+        min-width: 220px;
+        padding: 14px 24px;
+        font-size: 15px;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        @include btn($primary, $white);
+
+        i { font-size: 16px; }
+      }
+
+      .qty-stepper {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: $white;
+        border: 1px solid $border;
+        border-radius: 12px;
+        padding: 4px 8px;
+
+        button {
+          width: 36px;
+          height: 36px;
+          border-radius: 10px;
+          border: 0;
+          background: transparent;
+          color: $dark;
+          font-size: 18px;
+          font-weight: 600;
+          cursor: pointer;
+          display: grid;
+          place-items: center;
+          transition: 0.2s;
+
+          &:hover {
+            background: $primary-light;
+            color: $primary;
+          }
+
+          &:active {
+            transform: scale(0.95);
+          }
+        }
+
+        span {
+          min-width: 40px;
+          text-align: center;
+          font: 600 16px $font-body;
+          color: $dark;
+        }
+      }
+    }
+  }
+}
+
+.resenas {
+  border-top: 1px solid $border;
+  padding-top: 36px;
+
+  .resenas-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    h2 {
+      font-size: 24px;
+      font-family: $font-display;
+
+      span {
+        font-size: 15px;
+        color: $text;
+        font-family: $font-body;
+      }
+    }
+
+    .promedio {
+      font: 600 14px $font-body;
+      color: $gold;
+      background: rgba(201, 162, 75, 0.12);
+      padding: 6px 14px;
+      border-radius: 999px;
+    }
+  }
+
+  .lista {
+    display: grid;
+    gap: 14px;
+    margin: 22px 0 34px;
+  }
+
+  .resena {
+    background: $white;
+    border: 1px solid $border;
+    border-radius: 16px;
+    padding: 18px 20px;
+    box-shadow: 0 6px 18px rgba(45, 31, 39, 0.05);
+    transition: 0.2s;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $shadow;
+    }
+
+    .resena-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+
+      .autor-img {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: $primary-light;
+        color: $primary;
+        font: 600 13px/34px $font-body;
+        text-align: center;
+        text-transform: uppercase;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .autor {
+        font-weight: 600;
+        font-size: 14px;
+        color: $dark;
+      }
+
+      .fecha {
+        font-size: 12px;
+        color: $text;
+        margin-left: auto;
+      }
+
+      .resena-mias {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: $primary;
+        background: $primary-light;
+        padding: 4px 10px;
+        border-radius: 999px;
+
+        button {
+          background: none;
+          border: 0;
+          cursor: pointer;
+          font-size: 12px;
+          color: $primary;
+          padding: 2px 3px;
+
+          &:hover {
+            color: $dark;
+          }
+        }
+      }
+    }
+
+    p {
+      color: $text;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+  }
+
+  .stars {
+    display: inline-flex;
+    gap: 2px;
+    color: #e3dcdd;
+    font-size: 16px;
+
+    .on {
+      color: $gold;
+      text-shadow: 0 1px 2px rgba(201, 162, 75, 0.35);
+    }
+  }
+}
+
+.resena-form {
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 18px;
+  box-shadow: $shadow;
+  padding: 22px;
+  max-width: 640px;
+
+  h3 {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+
+  .editando-note {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: $primary-dark;
+    background: $primary-light;
+    border: 1px dashed $primary;
+    border-radius: 10px;
+    padding: 8px 12px;
+
+    button {
+      margin-left: auto;
+      background: none;
+      border: 0;
+      color: $primary;
+      font-weight: 600;
+      font-size: 12.5px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .campo-estrellas {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13.5px;
+    color: $text;
+
+    .estrellas-input {
+      display: flex;
+      gap: 3px;
+
+      button {
+        border: 0;
+        background: none;
+        font-size: 26px;
+        line-height: 1;
+        color: #e3dcdd;
+        cursor: pointer;
+        padding: 2px 3px;
+        transition: 0.15s;
+
+        &:hover {
+          transform: scale(1.2);
+          color: $gold;
+        }
+
+        &.on {
+          color: $gold;
+          text-shadow: 0 2px 4px rgba(201, 162, 75, 0.4);
+        }
+      }
+    }
+  }
+
+  textarea {
+    padding: 12px 14px;
+    border: 1px solid $border;
+        border-radius: 12px;
+        font: 400 14px $font-body;
+        outline: none;
+        resize: vertical;
+        min-height: 90px;
+
+        &:focus {
+          border-color: $primary;
+        }
+  }
+
+  .msg-error {
+    color: #c0392b;
+    font-size: 13px;
+  }
+
+  .msg-ok {
+    color: $primary-dark;
+    font-size: 13px;
+  }
+
+  .btn-primary {
+    @include btn($primary, $white);
+    align-self: flex-start;
+  }
+
+  .link-primario {
+    color: $primary;
+    font-weight: 500;
+  }
+}
+
+.mercado-cruzado {
+  margin-top: 8px;
+
+  .section-head span {
+    color: $text;
+    font-size: 14px;
+  }
+}
